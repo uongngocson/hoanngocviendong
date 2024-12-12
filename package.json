@@ -1,4 +1,5 @@
 {
+  "homepage": "https://uongngocson.github.io/indochinaquensucess",
   "name": "ngocsonwithlove",
   "version": "0.1.0",
   "private": true,
@@ -61,7 +62,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -87,6 +90,5 @@
     "sequelize": "^6.37.4",
     "sequelize-cli": "^6.6.2"
   },
-  "proxy": "http://localhost:8080",
-  "homepage": "https://uongngocson.github.io/indochinaqueenbooking"
+  "proxy": "http://localhost:8080"
 }
