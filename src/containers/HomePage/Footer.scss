@@ -1,0 +1,132 @@
+
+   
+//   /* Phần nền */
+// .section {
+//     position: relative;
+//     // background-image: 
+//     // linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.7)), /* Gradient đen mờ */
+//     // url('https://indochinaqueencruise.com.vn/wp-content/uploads/2024/10/z5904310426950_e784a3945815ce610d765eda13982a7e.jpg'); /* Ảnh nền */    background-size: cover; /* Làm cho hình nền phủ kín toàn bộ phần tử */
+//     background-position: center;
+//     background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
+//     height: 100vh; /* Đảm bảo phần nền có chiều cao đầy đủ màn hình */
+//     width: 100%;
+// }
+
+// /* Phần nội dung */
+// .content {
+//     position: sticky; /* Giữ nội dung cố định khi cuộn */
+//     top: 0;
+//     background-color: white; /* Nền trắng cho phần nội dung */
+//     padding: 20px;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ */
+//     z-index: 1; /* Đảm bảo phần nội dung không bị đè lên */
+// }
+
+// /* Các nội dung khác có thể thêm vào tùy chỉnh */
+.indochinaqueen-main-footer{
+    background-color: #004da6;
+    width: 100%;
+    height: 400px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    padding-top: 50px;
+    margin-top: 90px;
+    .indochinaqueen-main-footer-box1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .indochinaqueen-main-footer-box1-list1{
+            display: flex;
+            justify-content: space-between;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 600;
+            gap: 20px;
+        }
+        .indochinaqueen-main-footer-box1-list2{
+            display: flex;
+            justify-content: space-between;
+            .indochinaqueen-main-footer-box1-list2-item1{
+                display: flex;
+                font-size: 1em;
+                color: #fff;
+                font-weight: 550;
+                gap: 10px;
+            }
+            .indochinaqueen-main-footer-box1-list2-item2{
+                display: flex;
+                font-size: 1em;
+                color: #fff;
+                font-weight: 550;
+                gap: 10px;
+            }
+        }
+        .indochinaqueen-main-footer-box1-list3{
+            // background-color: #CF4312;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+          align-items: center;
+         
+            
+            .indochinaqueen-main-footer-box1-list3-fanpage{
+                width: 403px;
+                height: 153px;
+                border: 2px solid black;
+                position: relative;
+                right: 0;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                
+
+            }
+            .indochinaqueen-main-footer-box1-list3-list1{
+                padding-top: 37px;
+                width: 403px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                gap: 5px;
+                text-align: center;
+                .indochinaqueen-main-footer-box1-list3-thanhtoan{
+
+                }
+                .indochinaqueen-main-footer-box1-list3-booking{
+                    width: 200px;
+                    color: #FFF;
+                    background-color: #CF4312;
+                    padding: 12px;
+                    font-size: 1.125em;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+            }
+            
+        }
+        .indochinaqueen-main-footer-box1-list4{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-weight: 550;
+            margin-bottom: 10px;
+            .indochinaqueen-main-footer-box1-list4-tag{
+                display: flex;
+                color: #fff;
+                font-weight: 550;
+                gap: 5px;
+            }
+        }
+    }
+   
+}
+    
+    

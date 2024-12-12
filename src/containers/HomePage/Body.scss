@@ -1,0 +1,787 @@
+.indochinaqueen-body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+ 
+
+ .indochinaqueen-body-box1{
+    // background-color: aqua;
+    width: 100%;
+    height: 585px;
+    display: flex;
+    // justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+    // background-color: aquamarine;
+    align-items: center;
+    .indochinaqueen-body-box1-cruise{
+        position: relative;
+        width: 297px;
+        height: 455px;
+        background-color: #fff;
+        // background-color: rgb(55, 45, 190);
+        overflow: hidden;
+        font-size: 1.125rem;
+        // border: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        border-radius: 2px ;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+
+        .indochinaqueen-body-box1-cruise-item1{
+            .indochinaqueen-body-box1-cruise-item1-text1{
+                color: #004da6;
+                text-transform: uppercase; /* Viết hoa toàn bộ */
+
+                
+
+
+            }
+            .indochinaqueen-body-box1-cruise-item1-text2{
+                color: #004da6;
+                text-transform: uppercase; /* Viết hoa toàn bộ */
+                font-size: 2em;
+                //#413831
+
+
+            }
+        }
+        .indochinaqueen-body-box1-cruise-item3{
+            color:#413831 ;
+            font-style: italic;
+
+
+        }
+        .indochinaqueen-body-box1-cruise-item4{
+            cursor: pointer;
+            margin: 0 auto; // Căn giữa theo chiều ngang
+            text-transform: uppercase;
+            background-color: #004da6;
+            color: #fff;
+            width: 139px;
+            height: 42px;
+            display: flex;
+            align-items: center; // Căn giữa nội dung theo trục dọc
+            justify-content: center; // Căn giữa nội dung theo trục ngang
+            border-radius: 17px;
+            font-weight: 600;
+
+
+        }
+
+
+    }
+    .indochinaqueen-body-box1-cruise-booking{
+        background-color: #16a8ff;
+        .indochinaqueen-body-box1-cruise-booking-text1{
+            font-size: 1.75em;
+            color: #FFF;
+            font-weight: bold;
+        }
+        .indochinaqueen-body-box1-cruise-booking-text2{
+            font-size: 1.250em;
+            color: #FFF;
+            font-style: italic;
+
+        }
+        .indochinaqueen-body-box1-cruise-booking-text3{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            .indochinaqueen-body-box1-cruise-booking-text3-list1{
+                font-size: 1.250em;
+                color: #FFF;
+                font-style: italic;
+                margin-top: 10px;
+
+            }
+            .indochinaqueen-body-box1-cruise-booking-text3-list2{
+                cursor: pointer;
+                display: flex;
+                font-size: 1em;
+                color: #FFF;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                line-height: 20px;
+                font-weight: bold;
+                .cusorcus{
+                    cursor: pointer;
+
+                    &:hover{
+                        color: #004da6;
+                        transition: color 0.3s ease; // Hiệu ứng chuyển đổi màu mượt mà trong 0.3 giây
+
+                    }
+                }
+                
+
+            }
+
+        }
+        .indochinaqueen-body-box1-cruise-booking-text4{
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #004da6;
+            font-weight: bold;
+            background-color: #FFF;
+            width: 210px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: 0 auto; // Căn giữa theo chiều ngang
+            margin-bottom: 1.5px;
+
+            
+
+            
+
+        }
+
+    }
+
+ }
+ .indochinaqueen-body-box2{
+    height: 225px;
+    background: url(../../assets/images/banner3.webp) center 0 no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
+
+ }
+ 
+ .indochinaqueen-body-box3{
+    width: 100%;
+    height: 800px;
+    position: relative;
+
+    
+    // background-color: #16a8ff;
+    .indochinaqueen-body-box3-item1{
+        // background-color: #589240;
+        width: 100%;
+        height: 540px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+       
+        .indochinaqueen-body-box3-item1-list1{
+            color: #004da6;
+            font-size: 2.125em;
+            text-transform: uppercase;
+            vertical-align: inherit;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            // background-color: red;
+           
+        }
+        .indochinaqueen-body-box3-item1-list2{
+            // background-color: #16a8ff;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            padding-right: 20px;
+            width: 100%;
+            .indochinaqueen-body-box3-item1-list2-box1{
+                flex-grow: 1; /* Box con sẽ tự động co giãn theo box cha */
+                flex-shrink: 1; /* Box con sẽ co lại khi không đủ không gian */
+                flex-basis: 0; /* Đặt kích thước cơ sở ban đầu cho phép linh hoạt */
+                max-width: 281px; /* Giữ kích thước tối đa */
+                height: auto;
+                background-color: #FFF;
+                border-radius: 2px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 15px;
+                text-align: center;
+            
+                .indochinaqueen-body-box3-item1-list2-box1-text1{
+                    font-size: 1.625em;
+                    color: #004da6;
+                    line-height: 24px;
+
+
+                }
+                .indochinaqueen-body-box3-item1-list2-box1-text2{
+                    font-size: 1.25em;
+                    color: #413831;
+                    line-height: 24px;
+                    font-style: italic;
+                    
+
+                }
+                .indochinaqueen-body-box3-item1-list2-box1-text3{
+                    width: 100%;
+
+                }
+
+
+            }
+    
+        }
+
+    }
+    .indochinaqueen-body-box3-item2{
+        width: 100%;
+        position: relative;
+
+        .item2-cus-more{
+            max-width: 1070px;
+            position: relative;
+            height: 227px;
+            border-radius: 2px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            // background-color: #16a8ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            gap: 10px;
+            .indochinaqueen-body-box3-item2-text1{
+                font-size: 2.250em;
+                color: #589240;
+                font-style: italic;
+                font-weight: bold;
+    
+              
+    
+            }
+            .indochinaqueen-body-box3-item2-text2{
+                font-size: 2.250em;
+                color:  #6AA143;
+                font-style: italic;
+                font-weight: bold;
+            }
+            .indochinaqueen-body-box3-item2-text3{
+                color: #413831;
+                font-size: 1.250em;
+                font-style: italic;
+            }
+            .indochinaqueen-body-box3-item2-text4{
+                cursor: pointer;
+                background-color: #589240;
+                font-size: 1.250em;
+                color: #FFF;
+                text-transform: uppercase; /* Viết hoa toàn bộ */
+                padding: 5px 45px;
+                font-weight: bold;
+                border-bottom:1.5px solid gray ;
+    
+    
+                
+                
+    
+            }
+
+        }
+       
+
+
+      
+
+
+    }
+
+   
+
+ }
+ .indochinaqueen-body-box4{
+    background-color: #16a8ff;
+    width: 100%;
+    height: 466px;
+    background: url(../../assets/images/banner5.jpg) center 0 no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 200px;
+    
+    .indochinaqueen-body-box4-item1{
+        width: 500px;
+        height: 285px;
+        // background-color: #6AA143;
+        .indochinaqueen-body-box4-box-list1{
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 2.000em;
+            font-weight: bold;
+
+        }
+        .indochinaqueen-body-box4-box-list2{
+            width: 500px;
+            height: 271px;
+            background-color: #fff;
+            display: flex;
+            font-size: 1.375em;
+            color: #004da6;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            gap: 10px;
+            padding-left: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+
+            .indochinaqueen-body-box4-box-list2-item1,.indochinaqueen-body-box4-box-list2-item2{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                
+                .indochinaqueen-body-box4-box-list2-item1-text1{
+                    font-weight: 600;
+
+                }
+                .indochinaqueen-body-box4-box-list2-item1-text2{
+                    font-style: italic;
+                    color: #413831;
+                    line-height: 20px;
+
+                    
+                }
+                .indochinaqueen-body-box4-box-list2-item1-text3{
+                    cursor: pointer;
+                    background-color: #004da6;
+                    color: #fff !important;
+                    padding: 7px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    border-radius: 30px;
+
+                    
+                }
+
+
+            }
+            
+            .indochinaqueen-body-box4-box-list2-item2{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                border-left:1px solid gray ;
+                padding-left: 10px;
+                padding-right: 5px;
+
+
+
+            }
+
+
+        }
+      
+    }
+ }
+ .indochinaqueen-body-box5{
+    width: 100%;
+    height: 445px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid gray;
+
+    .indochinaqueen-body-box5-list1{
+        color: #332b25;
+        font-size: 2em;
+        font-weight: bold;
+
+    }
+    .indochinaqueen-body-box5-list2{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        .indochinaqueen-body-box5-list2-blog1,.indochinaqueen-body-box5-list2-blog2,.indochinaqueen-body-box5-list2-blog3{
+            width: 380px;
+            height: 190px;
+            // background-color: #16a8ff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+            display: flex;
+            cursor: pointer;
+
+            .blog1-img{
+                font-size: 1.125em;
+                font-weight: bold;
+
+            }
+            .blog1-text{
+                color: #413831;
+                font-size: 1.125em;
+                font-weight: bold;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                margin-top: 20px;
+                padding-left: 10px;
+                line-height: 24px;
+
+                .blog1-text-img1{
+                    color: #1d1a18;
+
+
+                }
+                .blog1-text-img2{
+                    color: #413831;
+                    font-style: italic;
+
+                    
+                }
+
+
+            }
+
+
+
+        }
+        .indochinaqueen-body-box5-list2-blog2{
+            width: 380px;
+            height: 190px;
+            // background-color: #16a8ff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+            display: flex;
+
+            
+        }
+        .indochinaqueen-body-box5-list2-blog3{
+            width: 380px;
+            height: 190px;
+            // background-color: #16a8ff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+            display: flex;
+
+            
+        }
+
+    }
+    .indochinaqueen-body-box5-list3{
+        font-size: 1.125em;
+        font-weight: bold;
+         background-color: #004da6;
+
+         background-color: #004da6;
+    color: #fff !important;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    }
+
+
+ }
+ .indochinaqueen-body-box5::after {
+    content: '';
+    // bottom: 0;
+    position: relative;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    width: 100%;
+    height: 30px; /* Chiều cao của viền sóng */
+    height: 5px; /* Chiều cao của viền */
+    background-image: linear-gradient(45deg, gray 25%, transparent 25%, transparent 75%, gray 75%, gray),
+    linear-gradient(-45deg, gray 25%, transparent 25%, transparent 75%, gray 75%, gray);
+background-size: 20px 20px; /* Kích thước ô hình thoi */
+background-position: 0 0, 10px 10px; /* Tạo sự chồng chéo để thành hình thoi */    background-size: 20px 20px; /* Kích thước của các hình thoi */
+}
+ .indochinaqueen-body-box6,.indochinaqueen-body-box7{
+    width: 100%;
+    height: 800px;
+    // background-color: #16a8ff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .indochinaqueen-body-box7-chosemenu{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+        .indochinaqueen-body-box7-chosemenu-list1{
+            background-color: #CCCCCC;
+            color: #413831;
+            padding: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: red;
+
+            }
+
+           
+
+
+        }
+        .active-hover {
+            background-color: #004da6 !important; /* Màu khác khi hover */
+            color: #FFF;
+           
+        }
+
+    }
+    .indochinaqueen-body-box6-item1{
+        color: #004da6;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+        
+    }
+    .indochinaqueen-body-box6-item2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        color: #332b25;
+        font-size: 1.2em;
+        color: #413831;
+        font-size: 1.25em;
+        font-style: italic;
+        padding-left: 20px;
+    }
+    .indochinaqueen-body-box6-item3{
+        background-color: #FFF;
+        width: 100%;
+        height: 579px;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+        position: relative;
+        display: flex;
+
+        .indochinaqueen-body-box6-item3-list1-left{
+            
+            display: flex;
+            justify-content: center; /* Căn giữa nội dung mũi tên */
+            align-items: center; /* Căn giữa nội dung mũi tên */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Hình tròn */
+            background-color: #004da6;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            top: 50%; /* Căn giữa chiều cao của cha */
+            transform: translateY(-50%); /* Dịch ngược lên nửa chiều cao của nó */
+            user-select: none; // Ngăn không cho chọn văn bản
+            -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+            -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+            -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+
+           
+
+        }
+        .indochinaqueen-body-box6-item3-list1-right {
+            display: flex;
+            justify-content: center; /* Căn giữa nội dung mũi tên */
+            align-items: center; /* Căn giữa nội dung mũi tên */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Hình tròn */
+            background-color: #004da6;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            top: 50%; /* Căn giữa chiều cao của cha */
+            transform: translateY(-50%); /* Dịch ngược lên nửa chiều cao của nó */
+            user-select: none; // Ngăn không cho chọn văn bản
+            -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+            -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+            -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+    
+           
+
+        }
+        
+        .indochinaqueen-body-box6-item3-list1-right:hover {
+            background-color: #0066cc; /* Màu nền khi hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+        }
+        
+        .indochinaqueen-body-box6-item3-list1-right:active {
+            transform: scale(0.95); /* Thu nhỏ nhẹ khi click */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng nhỏ hơn khi click */
+        }
+        //left
+        .indochinaqueen-body-box6-item3-list1-left:hover {
+            background-color: #0066cc; /* Màu nền khi hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+        }
+        
+        .indochinaqueen-body-box6-item3-list1-left:active {
+            transform: scale(0.95); /* Thu nhỏ nhẹ khi click */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng nhỏ hơn khi click */
+        }
+        
+
+        .indochinaqueen-body-box6-item3-list1,.indochinaqueen-body-box6-item3-list2,.indochinaqueen-body-box6-item3-list3,.indochinaqueen-body-box6-item3-list4{
+            background-color: #FFF;
+            width: 262px;
+            height: 579px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+            padding: 5px;
+            color: #413831;
+            font-size: 1em;
+            font-weight: bold;
+            justify-content: space-between;
+
+            .list1-item1{
+                display: flex;
+                width: 100%;
+                height: 280px;
+                border-radius: 10px;
+                overflow: hidden; /* Giúp ảnh không bị vỡ khi phóng to */
+
+                &:hover{
+                    transition: transform 0.5s ease; /* Thêm hiệu ứng mượt mà khi thay đổi kích thước */
+                    transform: scale(1.1); /* Phóng to ảnh lên 10% */
+
+
+                }
+               
+                  
+                 
+                  
+              
+
+                // width: 100%;
+                // height: 100%;
+
+            }
+          
+          
+             
+            .list1-item2{
+                display: flex;
+
+            }
+            .list1-item3{
+                font-weight: 700;
+                
+                
+            }
+            .list1-item4{
+                color: red;
+                
+            }
+            .list1-item5{
+                
+            }
+            .list1-item6{
+                
+            }
+            .list1-item7{
+                
+            }
+            .list1-item8{
+                display: flex;
+                justify-content: space-between;
+                background-color: #004da6;
+                padding: 15px;
+                color: #FFF;
+                
+            }
+
+
+        }
+        .indochinaqueen-body-box6-item3-list2{
+            background-color: #FFF;
+            width: 262px;
+            height: 579px;
+            display: flex;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+
+
+        }
+        .indochinaqueen-body-box6-item3-list3{
+            background-color: #FFF;
+            width: 262px;
+            height: 579px;
+            display: flex;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+
+
+        }
+        .indochinaqueen-body-box6-item3-list4{
+            background-color: #FFF;
+            width: 262px;
+            height: 579px;
+            display: flex;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+
+
+        }
+
+    }
+    .indochinaqueen-body-box6-item4 {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+        gap: 15px; /* Khoảng cách giữa các chấm */
+        z-index: 9999999999;
+    }
+    
+    .dot {
+        width: 20px; /* Kích thước chấm */
+        height: 20px;
+        background-color: #cccccc; /* Màu sắc mặc định */
+        border-radius: 50%; /* Hình tròn */
+        cursor: pointer; /* Thay đổi con trỏ khi hover */
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+    }
+    
+    .dot:hover {
+        background-color: #004da6; /* Màu sắc khi hover */
+        transform: scale(1.2); /* Phóng to khi hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    }
+    
+    .dot:active {
+        transform: scale(1); /* Thu nhỏ nhẹ khi click */
+        background-color: #0066cc; /* Đổi màu khi click */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng nhỏ hơn */
+    }
+    .active-hover {
+        background-color: #004da6 !important; /* Màu khác khi hover */
+       
+    }
+    
+
+ }
+
+ 
+
+}

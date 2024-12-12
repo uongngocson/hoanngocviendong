@@ -1,0 +1,190 @@
+.containerRent{
+    // background-color: aqua;
+    width: 100%;
+
+
+    .containerRent-box1{
+        margin-top: 20px;
+        width: 100%;
+        height: 60px;
+        background-color: blanchedalmond;
+        display: flex  ;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-weight: 700;
+
+
+        .containerRent-box1-list1-cus{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            // background-color: aquamarine;
+
+            
+        }
+        .containerRent-box1-list1{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            background-color: aquamarine;
+
+            
+        }
+
+        
+
+
+
+    }
+
+    .containerRent-box2{
+        margin-top: 60px;
+        // background-color: bisque;
+        width: 100%;
+        height: 634px;
+        .containerRent-box2-list1{
+            // background-color: aqua;
+            height: 34px;
+            width: 100%;
+            font-weight: 700;
+            font-size: larger;
+
+
+        }
+
+        .containerRent-box2-list2, .containerRent-box2-list3,.containerRent-box2-list4{
+            // background-color: rgb(76, 32, 210);
+            height: 200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+           
+                
+
+                .containerRent-box2-list2-item1{
+                    display: flex;
+                    position: relative;
+                    height: 30px;
+                    left: 0;
+                    font-weight: 700;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin-left: 30px;
+
+
+                }
+                .containerRent-box2-list2-item2{
+                    width: 100%;
+                    height: 190px;
+                    background-color: burlywood;
+                    display: grid;
+                    gap: 60px;
+                    overflow-x: auto; /* Hiển thị thanh cuộn ngang nếu nội dung quá lớn */
+                    grid-auto-flow: column; /* Sắp xếp các phần tử theo hàng ngang */
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Điều chỉnh kích thước cột */
+                    padding-left: 30px;
+                    align-items: center; /* Căn giữa theo chiều dọc */
+                    .containerRent-box2-list2-item2-status{
+                        height: 120px;
+                        width: 185px;
+                        background-color: rgb(16, 178, 236);
+                        display: flex;
+                        flex-direction: column;
+                        .status--nameroom{
+                            position: relative;
+                            width: 100%;
+                            height: 40px;
+                        //    background-color: rgb(52, 39, 191);
+                           display: flex;
+                           justify-content: space-between;
+                           padding-left: 5px;
+                           padding-right: 5px;
+                           font-weight: 600;
+
+                           align-items: center;
+
+                           .status--nameroom-list2{
+                            .status--nameroom-list2-item{
+                                position: absolute;
+                                background-color: brown;
+                                width: 208px;
+                                height: 105px;
+
+
+                            }
+                           }
+                           
+
+                        }
+                        .status--style{
+                            position: relative;
+                            width: 100%;
+                            height: 40px;
+                        //    background-color: rgb(52, 39, 191);
+                           display: flex;
+                           justify-content: space-between;
+                           padding-left: 5px;
+                           padding-right: 5px;
+                           font-weight: 600;
+
+                           align-items: center;
+
+                        }
+                        .status--status{
+                            position: relative;
+                            width: 100%;
+                            height: 40px;
+                        //    background-color: rgb(52, 39, 191);
+                           display: flex;
+                           justify-content: space-between;
+                           padding-left: 5px;
+                           padding-right: 5px;
+                           font-weight: 600;
+
+                           align-items: center;
+
+
+
+                        }
+
+
+
+
+
+
+                    }
+                  
+
+                }
+            
+
+
+        }
+        .containerRent-box2-list3{
+            // background-color: rgb(105, 180, 39);
+            height: 200px;
+            width: 100%;
+            margin-top: 30px;
+
+
+        }
+        .containerRent-box2-list4{
+            // background-color: rgb(218, 127, 31);
+            margin-top: 30px;
+            height: 200px;
+            width: 100%;
+
+
+        }
+
+    }
+    .containerRent-box2-cus{
+        margin-top: 122px;
+        background-color: aqua;
+
+
+    }
+}

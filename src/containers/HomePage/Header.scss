@@ -1,0 +1,428 @@
+
+$breakpoint-xs: 320px;   // Kích thước màn hình nhỏ (smartphone)
+$breakpoint-sm: 576px;   // Kích thước màn hình nhỏ đến vừa (smartphone và tablet nhỏ)
+$breakpoint-md: 768px;   // Kích thước màn hình máy tính bảng
+$breakpoint-lg: 992px;   // Kích thước màn hình máy tính bàn nhỏ
+$breakpoint-xl: 1200px;  // Kích thước màn hình máy tính bàn lớn
+$breakpoint-xxl: 1400px; // Kích thước màn hình rất lớn (HD, 4K)
+
+
+.indochinaqueen-header{
+    
+    background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.7)), /* Gradient đen mờ */
+    url('../../assets/images/banner1.jpg'); /* Ảnh nền */
+    background-size: cover;         /* Đảm bảo hình ảnh phủ toàn bộ phần tử */
+    background-position: center;    /* Căn giữa hình ảnh trong phần tử */
+    background-repeat: no-repeat;
+    height: 100%;                  /* Điều chỉnh chiều cao của phần header */
+    width: 100%; 
+    position: relative;
+    background-position: center;
+    background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
+    // background-color: aqua;
+                       /* Chiều rộng chiếm toàn bộ màn hình */
+
+                    //    @media (max-width: $breakpoint-xs) { 
+                    //     // Cấu hình cho các màn hình nhỏ hơn 320px (điện thoại siêu nhỏ)
+                    //     padding: 10px;
+                    //   }
+                    
+                    //   // Màn hình từ 320px đến 576px
+                    //   @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) { 
+                    //     // Cấu hình cho màn hình smartphone nhỏ đến vừa
+                    //     max-width: 100%;
+                    //   }
+                    
+                    //   // Màn hình từ 576px đến 768px
+                    //   @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+                    //     // Cấu hình cho màn hình smartphone lớn và tablet nhỏ
+                    //     max-width: 540px;
+                    //   }
+                    
+                    //   // Màn hình từ 768px đến 992px
+                    //   @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+                    //     // Cấu hình cho màn hình tablet
+                    //     max-width: 720px;
+                    //   }
+                    
+                    //   // Màn hình từ 992px đến 1200px
+                    //   @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+                    //     // Cấu hình cho màn hình laptop và desktop nhỏ
+                    //     max-width: 960px;
+                    //   }
+                    
+                    //   // Màn hình từ 1200px đến 1400px
+                    //   @media (min-width: $breakpoint-xl) and (max-width: $breakpoint-xxl) {
+                    //     // Cấu hình cho màn hình desktop lớn
+                    //     max-width: 1140px;
+                    //   }
+                    
+                    //   // Màn hình từ 1400px trở lên
+                    //   @media (min-width: $breakpoint-xxl) {
+                    //     // Cấu hình cho màn hình rất lớn
+                    //     max-width: 1320px;
+                    //   }    
+                    
+                    // @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+                    //     // Cấu hình cho màn hình tablet
+                    //     max-width: 100%;
+                    //   }
+
+
+    .indochinaqueen-header-navbar1{
+        position: absolute;
+        margin-top: 20px;
+        width: 100%;
+        height: 151px;
+        background-color: rgba(161, 159, 156, 0.5); /* Màu nền đỏ với 50% độ trong suốt */
+
+            @media (min-width: $breakpoint-xxl) {
+                        // Cấu hình cho màn hình rất lớn
+                        max-width: 100%;
+                      }    
+
+   // Màn hình từ 768px đến 992px
+                    
+
+        .indochinaqueen-header-navbar1-box1{
+            margin-top: 7px;
+            background-color: #ffffff;
+            width: 100%;
+            height: 84px;
+            font-size: 0.93em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Roboto', sans-serif; /* Font hỗ trợ tiếng Việt tốt */
+            font-weight: 500; /* Đủ đậm nhưng không làm mất dấu */
+            text-transform: uppercase; /* Viết hoa toàn bộ */
+            letter-spacing: 2.5px; /* Tăng khoảng cách chữ */
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Làm nổi chữ */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-shadow: 0 0 1px black; /* Thêm bóng mờ nhẹ */
+
+            
+            padding: 0 25px;
+//                    //   // Màn hình từ 992px đến 1200px
+
+                 @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+                    font-size: 0.65em;
+
+
+                        // Cấu hình cho màn hình laptop và desktop nhỏ
+                      }
+                         // Màn hình từ 768px đến 992px
+                      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+                        font-size: 0.5em;
+                        // background-color: #753535;
+
+
+                        // Cấu hình cho màn hình tablet
+                      }
+            .indochinaqueen-header-list1{
+                // background-color: aqua;
+            }
+
+            .indochinaqueen-header-list2{
+                display: flex;
+                gap: 30px;
+                align-items: center;
+                z-index: 99;
+
+                // background-color: aqua;
+                .header-hover-test{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 88px;
+                    text-decoration: none !important; /* Xóa underline */
+
+
+
+
+                    &:hover{
+                        color: #16a8ff;
+                        height: 88px;
+                        background-color:#FFF;
+                        z-index: 10;
+                       
+                    }
+
+                }
+                .header-hover-choose-language{
+                    cursor: pointer;
+                    align-items: center;
+                    gap: 20px;
+                    .header-hover-choose-language-list1{
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                    .header-hover-choose-language-list2{
+                        // margin-top: 10px;
+                        position: absolute;
+                        width: 120px;
+                        height: 80px;
+                        background-color: #fff;
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding-right: 25px;
+                        gap: 10px;
+                        right: 7px;
+                        .header-hover-choose-language-list2-item1{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: 30px;
+                            .header-hover-choose-language-list2-item1-text{
+
+                            }
+                            .header-hover-choose-language-list2-item1-flag{
+                              
+                                  
+
+                            }
+                        }
+                        
+                        display: none;
+                    }
+
+                    &:hover{
+                        .header-hover-choose-language-list2{
+                            // margin-top: 10px;
+                            position: absolute;
+                            width: 120px;
+                            height: 80px;
+                            background-color: #fff;
+                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow nhẹ */
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding-right: 25px;
+                            gap: 10px;
+
+                          
+                            .header-hover-choose-language-list2-item1{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                gap: 30px;
+                                &:hover{
+                                    color: red;
+                                }
+                            }
+                            
+                        }
+
+
+                    }
+
+                }
+
+
+                .indochinaqueen-header-list2-cartshop{
+
+                    .indochinaqueen-header-list2-cartshop-1{
+                        gap: 5px;
+                        display: flex;
+                        align-items: center;
+                        .indochinaqueen-header-list2-cartshop-1-img{
+                            width: 20px;
+                            height: 16px;
+                        }
+ 
+                    }
+                }
+                // .header-hover{
+                //     position: relative;
+                //     background-color: red;
+                //     width: 100%;
+                //     height: 88px;
+                //     display: flex;
+                //     justify-content: center;
+                //     align-items: center;
+                // }
+              
+               
+
+
+            }
+
+        }
+        .indochinaqueen-header-navbar1-box-sticky{
+            position: fixed;
+            margin-top: -102px;
+            background-color: #ffffff;
+            width: 100%;
+            height: 70px;
+            font-size: 0.93em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Roboto', sans-serif; /* Font hỗ trợ tiếng Việt tốt */
+            font-weight: 600; /* Đủ đậm nhưng không làm mất dấu */
+            text-transform: uppercase; /* Viết hoa toàn bộ */
+            letter-spacing: 2.5px; /* Tăng khoảng cách chữ */
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Làm nổi chữ */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            z-index: 100;            
+            padding: 0 ;
+            padding-right: 25px;
+
+            //
+            opacity: 0;
+            transform: translateY(-20px); /* Dịch chuyển lên trên */
+            transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Hiệu ứng easing mượt */
+            pointer-events: none; /* Vô hiệu hóa sự tương tác khi ẩn */
+
+//                    //   // Màn hình từ 992px đến 1200px
+
+                 @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+                    font-size: 0.65em;
+
+
+                        // Cấu hình cho màn hình laptop và desktop nhỏ
+                      }
+                         // Màn hình từ 768px đến 992px
+                      @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+                        font-size: 0.5em;
+                        // background-color: #753535;
+
+
+                        // Cấu hình cho màn hình tablet
+                      }
+            .indochinaqueen-header-list1{
+                // background-color: aqua;
+                display: flex;
+                .indochinaqueen-header-list1--menu{
+                    display: flex;
+                    width: 183px;
+                    height: 70px;
+                    background-color: #16a8ff;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.625em;
+                    line-height: 70px;
+                    justify-content: center;
+                    gap: 10px;
+                    cursor: pointer;
+
+                }
+            }
+            
+
+            .indochinaqueen-header-list2{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                color: #004da6;
+                // background-color: aqua;
+                .indochinaqueen-header-list2-text1{
+                    font-size: 1.125em;
+
+                }
+                .indochinaqueen-header-list2-text2{
+                    font-size: 1.125em;
+                    font-style: italic;
+
+
+                }
+
+               
+
+            }
+
+        }
+        .indochinaqueen-header-navbar1-box-sticky.show {
+            background-color: #EAEAEA;
+            display: flex;
+            top: 115px; /* Khi cuộn đến 200px, phần tử "dính" vào đầu trang */
+            opacity: 1; /* Hiện dần */
+            transform: translateY(0); /* Trở về vị trí ban đầu */
+            pointer-events: all; /* Kích hoạt lại sự tương tác */
+            transition: all 1s cubic-bezier(0.42, 0, 0.58, 1); /* Easing tiêu chuẩn */
+        }
+        .indochinaqueen-header-navbar1-box2{
+            // position: absolute;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 25px;
+            font-size: 1.125em;
+            align-items: center;
+            color: #FFF;
+            font-weight: bold;
+            font-style: italic;
+            margin: 0;
+            line-height: 60px;
+            padding-left: 150px;
+
+
+
+        }
+
+    }
+    .indochinaqueen-header-navbar2{
+        width: 925px;
+         height: 216px;
+        background-color: aqua;
+        position: absolute; /* Căn chỉnh con */
+         top: 60%;
+         left: 50%;
+         transform: translate(-50%, -50%); /* Đưa con về đúng giữa */
+          background-color: rgba(0, 0, 0, 0.6); /* Màu nền đỏ với 50% độ trong suốt */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+    }
+    .indochinaqueen-header-navbar2-text1 , .indochinaqueen-header-navbar2-text2{
+        font-size: 1.125em;
+        align-items: center;
+        color: #FFF;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0;
+        line-height: 60px;
+        font-size: 42px;
+      
+
+       
+    }
+    .indochinaqueen-header-navbar2-text2{
+        font-size: 25px;
+        background-color: #014DA6;
+        cursor: pointer;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 30px;
+        
+
+
+
+    }
+
+    .indochinaqueen-header-navbar3{
+        position: absolute;
+        bottom: 0;
+        color:#16a8ff;
+        font-size: 34px;
+        text-transform: uppercase; /* Viết hoa toàn bộ */
+        font-weight: 600;
+        margin-left: 25px;  
+
+
+
+    }
+    
+}

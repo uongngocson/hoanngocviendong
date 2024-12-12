@@ -45,35 +45,63 @@ class Login extends Component {
     redirectToSystemPage = () => {
         const { navigate } = this.props;
         const redirectPath = '/system/user-manage';
-        navigate(`${redirectPath}`);
+        navigate(`${redirectPath}`);  // gửi một action lên redux bên dưới bạn có thẻ dung this.props.navigate()
     }
 
+    // processLogin = () => {
+    //     const { username, password } = this.state;
+
+    //     const { adminLoginSuccess, adminLoginFail } = this.props;
+    //     let loginBody = {
+    //         username: 'admin',
+    //         password: '123456'
+    //     }
+    //     //sucess
+    //     let adminInfo = {
+    //         "tlid": "0",
+    //         "tlfullname": "Administrator",
+    //         "custype": "A",
+    //         "accessToken": "eyJhbGciOiJIU"
+    //     }
+
+    //     adminLoginSuccess(adminInfo);
+    //     this.refresh();
+    //     this.redirectToSystemPage();
+    //     try {
+    //         adminService.login(loginBody)
+    //     } catch (e) {
+    //         console.log('error login : ', e)
+    //     }
+
+    // }
     processLogin = () => {
         const { username, password } = this.state;
-
         const { adminLoginSuccess, adminLoginFail } = this.props;
-        let loginBody = {
-            username: 'admin',
-            password: '123456'
-        }
-        //sucess
-        let adminInfo = {
-            "tlid": "0",
-            "tlfullname": "Administrator",
-            "custype": "A",
-            "accessToken": "eyJhbGciOiJIU"
-        }
 
-        adminLoginSuccess(adminInfo);
-        this.refresh();
-        this.redirectToSystemPage();
-        try {
-            adminService.login(loginBody)
-        } catch (e) {
-            console.log('error login : ', e)
-        }
+        // Kiểm tra thông tin đăng nhập
+        if (username === 'admin' && password === '12345') {
+            // Nếu thông tin đúng, tiến hành đăng nhập
+            let adminInfo = {
+                "tlid": "0",
+                "tlfullname": "Administrator",
+                "custype": "A",
+                "accessToken": "eyJhbGciOiJIU" // Access token giả lập
+            }
 
+            // Gọi hành động đăng nhập thành công
+            adminLoginSuccess(adminInfo);
+            this.refresh(); // Reset form
+            this.redirectToSystemPage(); // Chuyển hướng đến trang hệ thống
+        } else {
+            // Nếu thông tin sai, hiển thị lỗi
+            this.setState({ loginError: "Invalid username or password!" });
+            adminLoginFail();
+        }
     }
+
+
+
+
 
     handlerKeyDown = (event) => {
         const keyCode = event.which || event.keyCode;

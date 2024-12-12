@@ -1,0 +1,1025 @@
+.container-bookinghotel{
+    // background-color: aqua;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    .container-bookinghotel-box1{
+        width: 75%;
+        height: 100%;
+        // background-color: blueviolet;
+        // border: 1px solid gray;
+
+        .container-bookinghotel-box1-list1{
+            height: 62px;
+            width: 100%;
+            // background-color: red;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            .room{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                text-align: center;
+                .room1{
+                    font-size: 24px;
+                    color: #68CBF8;
+
+                }
+
+
+            }
+            .styperoom{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                text-align: center;
+                .styperoom1{
+                    font-size: 24px;
+                    color: #68CBF8;
+
+                }
+
+
+            }
+            .calcendar{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                text-align: center;
+                .calcendar1{
+                    font-size: 24px;
+                    color: #68CBF8;
+
+                }
+
+
+            }
+            .search{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                text-align: center;
+                .search1{
+                    font-size: 24px;
+                    color: #68CBF8;
+
+                }
+
+
+            }
+            .create{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                text-align: center;
+                .create1{
+                    font-size: 24px;
+                    color: #68CBF8;
+
+                }
+
+
+            }
+          
+
+        }
+        .container-bookinghotel-box1-list2{
+            height: 62px;
+            width: 100%;
+            // background-color: rgb(22, 216, 126);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 30px;
+            padding-left: 30px;
+            border: 1px solid gray;
+            .container-bookinghotel-box1-list2--list1,.container-bookinghotel-box1-list2--list2{
+                width: 130px;
+                height: 100%;
+                display: inline-grid;
+                align-items: center;
+
+                .box1-list2-text{
+                    display: flex;
+
+
+                }
+                .box1-list2-date{
+                    display: flex;
+                    justify-content: space-between;
+                    .box1-list2-date-2{
+                        // background-color: #d86d15;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        border-radius: 5px;
+
+                        
+                        &:hover{
+                            background-color: #d86d15;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        border-radius: 5px;
+
+
+                        }
+
+                    }
+                }
+                .box1-list2-tabledate{
+                    position: absolute;
+                    // background-color: #3bd73b;
+                    width: 296px;
+                    height: 354px;
+                    top: 124px;
+
+                    .date-picker {
+                        background-color: white;
+                        width: 320px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        font-family: Arial, sans-serif;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        position: absolute;
+                        z-index: 999;
+                      
+                        .date-picker-header {
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                          padding: 10px;
+                          background-color: #f5f5f5;
+                          font-weight: bold;
+                      
+                          .date-picker-nav {
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 18px;
+                          }
+                        }
+                      
+                        .calendar-grid {
+                          display: grid;
+                          grid-template-columns: repeat(7, 1fr);
+                          gap: 5px;
+                          padding: 10px;
+                      
+                          .calendar-day-name {
+                            text-align: center;
+                            font-weight: bold;
+                            color: #333;
+                          }
+                      
+                          .calendar-day {
+                            width: 100%;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            border-radius: 4px;
+                            transition: background-color 0.3s;
+                      
+                            &:hover {
+                              background-color: #e0e0e0;
+                            }
+                      
+                            &.selected {
+                              background-color: #3f51b5;
+                              color: white;
+                            }
+                      
+                            &.empty {
+                              background-color: transparent;
+                              cursor: default;
+                            }
+                          }
+                        }
+                      
+                        .selected-date {
+                          padding: 10px;
+                          text-align: center;
+                          font-size: 14px;
+                          color: #333;
+                        }
+                      }
+
+
+                }
+
+               
+                  
+
+            }
+            .container-bookinghotel-box1-list2--list2{
+                // background-color: #5727a4;
+                width: 130px;
+                height: 100%;
+
+                
+            }
+            .container-bookinghotel-box1-list2--list3{
+                // background-color: #3bd73b;
+                width: 130px;
+                height: 100%;
+
+                .container-bookinghotel-box1-list2--list3-item1{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 35px;
+                    width: 130px;
+                    height: 260px;
+                    // background-color: #3bd73b;
+                    .container-bookinghotel-box1-list2--list3-item1-input{
+                        width: 100%;
+                        .cus-input{
+                            width: 100%;
+                            // height: 100%;
+                            -webkit-appearance: none; /* Chrome, Safari, Opera */
+                            -moz-appearance: none; /* Firefox */
+                             appearance: none; /* Hỗ trợ chuẩn */
+                             background-color: transparent; /* Xóa nền nếu muốn */
+                             background-image: none; /* Xóa mũi tên mặc định */
+                             border: none;
+
+                        }
+                    }
+                   
+                }
+              
+
+                
+            }
+            .container-bookinghotel-box1-list2--list4{
+                width: 130px;
+                height: 100%;
+                .container-bookinghotel-box1-list2--list4-item1{
+
+                    .input-item1{
+                        width: 100%;
+                        margin-top: 35px;
+                        border:none ;
+                        color: black;
+                        border-bottom: 1px solid gray;
+
+                        
+                    }
+                }
+
+                
+            }
+            
+
+        }
+        // .container-bookinghotel-box1-list2{
+        //     height: 62px;
+        //     width: 100%;
+        //     background-color: rgb(22, 216, 126);
+
+        // }
+        .container-bookinghotel-box1-list3{
+            height: 62px;
+            width: 100%;
+            background-color: rgb(28, 159, 224);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding-left: 30px;
+            border: 1px solid gray;
+            .container-bookinghotel-box1-list3-item1,.container-bookinghotel-box1-list3-item2,.container-bookinghotel-box1-list3-item3{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .list3-item1-box{
+                    width: 10px;
+                    height: 10px;
+                    background-color: #3bd73b;
+
+
+                }
+                .list3-item1-text{
+
+                }
+            }
+
+        }
+        .container-bookinghotel-box1-list4{
+            height: calc(100%);
+            width: 100%;
+            border: 1px solid gray;
+            border-bottom: none;
+            .container-bookinghotel-box1-list4-text{
+              font-weight: 700;
+              font-size: medium;
+            }
+
+            .container-bookinghotel-box1-list4-margin{
+              .container-bookinghotel-box1-list4-text{
+                font-weight: 700;
+                font-size: medium;
+                margin-top: 17px;
+              }
+
+            }
+          
+            .container-bookinghotel-box1-list4-item1{
+                padding-left: 30px;
+                margin-top: 20px;
+                overflow-x: auto; /* Hiển thị thanh cuộn ngang khi cần */
+                white-space: nowrap; /* Ngăn các phần tử xuống dòng */
+                display: flex;
+                gap: 20px;
+
+
+
+
+                .container-bookinghotel-box1-list4-item1-room-row{
+                    height: 100%;
+                    display: flex;
+                    gap: 20px; /* Khoảng cách giữa các phần tử */
+
+                  
+                   
+
+                    
+
+                    .item1-date{
+                        width: 230px;
+                        height: 140px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        border: 1px solid gray;
+                          &.active{
+                      background-color: rgb(225, 219, 219);
+
+                    }
+
+
+                        // background-color: #169fc5;
+                        .item1-date--list1{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 0 5px;
+                            height: 33px;
+                            align-items: center;
+                            border: 1px solid gray;
+                            // background-color: #42e70f;
+                            .item1-date--list1--modal{
+                              position: absolute;
+                              background-color: #3bd73b;
+                              height: 114px;
+                              width: 162px;
+                              z-index: 999;
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: space-between;
+                              display: none;
+
+                            }
+                           
+                            .custom-button {
+                              background-color: #007bff; /* Màu nền xanh */
+                              color: #fff; /* Màu chữ trắng */
+                              font-size: 14px; /* Kích thước chữ */
+                              font-weight: bold; /* Chữ đậm */
+                              padding: 2px 2px; /* Khoảng cách bên trong nút */
+                              border: none; /* Xóa viền mặc định */
+                              border-radius: 5px; /* Bo góc nút */
+                              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+                              cursor: pointer; /* Con trỏ chuột */
+                              transition: all 0.3s ease; /* Hiệu ứng mượt khi hover */
+                          }
+                          
+                          .custom-button:hover {
+                              background-color: #0056b3; /* Màu nền khi hover */
+                              box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+                              transform: translateY(-2px); /* Hiệu ứng nổi lên khi hover */
+                          }
+                          
+                          .custom-button:active {
+                              transform: translateY(0); /* Quay lại khi click */
+                              box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Giảm đổ bóng khi click */
+                          }
+
+
+                          .custom-button-move{
+                            width: 55px;
+                            
+
+                              
+                          }
+                          
+                        }
+                    }
+                    
+
+
+                }
+            }
+
+        }
+
+    }
+
+    .container-bookinghotel-box2{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 62px repeat(7, 70px) 362px;
+        // background-color: #169fc5;
+        // background-color: #3bd73b;
+        .container-bookinghotel-box2-list1{
+            height: 62px;
+            width: 100%;
+            // background-color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            .container-bookinghotel-box2-list1-item2{
+                color: #009688;
+            }
+
+
+        }
+        .container-bookinghotel-box2-list2{
+            border: 1px solid gray;
+
+            // background-color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .container-bookinghotel-box2-list2-moneyBooking{
+              display: flex;
+              align-items: center;
+            }
+            .container-bookinghotel-box2-list2-item2{
+                background-color: #3D5EE1;
+                padding: 5px;
+                border-radius:7px ;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+        
+        
+            }
+        }
+        .container-bookinghotel-box2-list2-cusdetail{
+          display: flex;
+          justify-content: center;
+          background-color: #3bd73b;
+          font-weight: 700;
+
+        }
+
+        .container-bookinghotel-box2-list3{
+            border: 1px solid gray;
+
+            // background-color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+            .box2-list3{
+                position: relative;
+
+                .box2-list3-item2{
+                    display: flex;
+                    gap: 20px;
+                }
+                .box2-list3-item2-date{
+                    position: absolute;
+                    width: 315px;
+                    height: 315px;
+                    background-color: #d86d15;
+                    
+
+                    .date-picker {
+                        background-color: white;
+                        width: 320px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        font-family: Arial, sans-serif;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        position: absolute;
+                        z-index: 999;
+                      
+                        .date-picker-header {
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                          padding: 10px;
+                          background-color: #f5f5f5;
+                          font-weight: bold;
+                      
+                          .date-picker-nav {
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 18px;
+                          }
+                        }
+                      
+                        .calendar-grid {
+                          display: grid;
+                          grid-template-columns: repeat(7, 1fr);
+                          gap: 5px;
+                          padding: 10px;
+                      
+                          .calendar-day-name {
+                            text-align: center;
+                            font-weight: bold;
+                            color: #333;
+                          }
+                      
+                          .calendar-day {
+                            width: 100%;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            border-radius: 4px;
+                            transition: background-color 0.3s;
+                      
+                            &:hover {
+                              background-color: #e0e0e0;
+                            }
+                      
+                            &.selected {
+                              background-color: #3f51b5;
+                              color: white;
+                            }
+                      
+                            &.empty {
+                              background-color: transparent;
+                              cursor: default;
+                            }
+                          }
+                        }
+                      
+                        .selected-date {
+                          padding: 10px;
+                          text-align: center;
+                          font-size: 14px;
+                          color: #333;
+                        }
+                      }
+                
+                }
+                .box2-list3-item2-date-cus{
+                    position: absolute;
+                    width: 315px;
+                    height: 350px;
+                    background-color: #d86d15;
+                    right: 0;
+                    
+
+                    .date-picker {
+                        background-color: white;
+                        width: 320px;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        font-family: Arial, sans-serif;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        position: absolute;
+                        z-index: 999;
+                      
+                        .date-picker-header {
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                          padding: 10px;
+                          background-color: #f5f5f5;
+                          font-weight: bold;
+                      
+                          .date-picker-nav {
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            font-size: 18px;
+                          }
+                        }
+                      
+                        .calendar-grid {
+                          display: grid;
+                          grid-template-columns: repeat(7, 1fr);
+                          gap: 5px;
+                          padding: 10px;
+                      
+                          .calendar-day-name {
+                            text-align: center;
+                            font-weight: bold;
+                            color: #333;
+                          }
+                      
+                          .calendar-day {
+                            width: 100%;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            border-radius: 4px;
+                            transition: background-color 0.3s;
+                      
+                            &:hover {
+                              background-color: #e0e0e0;
+                            }
+                      
+                            &.selected {
+                              background-color: #3f51b5;
+                              color: white;
+                            }
+                      
+                            &.empty {
+                              background-color: transparent;
+                              cursor: default;
+                            }
+                          }
+                        }
+                      
+                        .selected-date {
+                          padding: 10px;
+                          text-align: center;
+                          font-size: 14px;
+                          color: #333;
+                        }
+                      }
+                
+                }
+            }
+        }
+
+        .container-bookinghotel-box2-list8{
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid gray;
+            overflow-y: auto;
+            border-bottom: none;
+            .box2-list8{
+
+                .box2-list8-item2{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+
+
+                }
+            }
+
+        }
+
+
+    }
+
+
+}
+
+.container-modal-mate {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Lớp overlay mờ */
+    backdrop-filter: blur(8px); /* Hiệu ứng làm mờ nền */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Căn giữa modal cả dọc và ngang */
+    z-index: 1000;
+  }
+  
+  .container-modal {
+    background-color: #fff;
+    border-radius: 10px; /* Bo góc cho modal */
+    width: 90%; /* Chiếm 90% chiều rộng màn hình */
+    max-width: 700px; /* Đảm bảo modal không vượt quá kích thước lớn */
+    max-height: 90vh; /* Giới hạn chiều cao modal */
+    padding: 20px 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto; /* Cho phép cuộn dọc khi nội dung vượt quá chiều cao */
+  
+    /* Đảm bảo modal có chiều rộng phù hợp trên mọi thiết bị */
+    @media screen and (max-width: 768px) {
+      width: 95%; /* Chiếm 95% màn hình trên các thiết bị nhỏ hơn */
+      padding: 15px 20px;
+    }
+  
+    @media screen and (max-width: 480px) {
+      width: 100%; /* Modal chiếm toàn bộ chiều rộng màn hình trên di động */
+      padding: 10px 15px;
+    }
+  }
+  
+  .container-modal-box1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .container-modal-box2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Khoảng cách giữa các nhóm input */
+    
+  }
+  
+  .container-modal-box3 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .container-modal-box3-list1,
+  .container-modal-box3-list2 {
+    background-color: #3D5EE1;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+
+    
+  }
+  
+  .container-modal-box2-list1 {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các hàng input */
+    @media screen and (max-width: 768px) {
+      flex-direction: column; /* Đổi sang dạng cột trên màn hình nhỏ */
+      gap: 10px;
+    }
+  }
+  
+  .container-modal-box2-list1-item1 {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Khoảng cách giữa label và input */
+    .custom-input-error{
+      // position: absolute;
+      position: relative;
+      top: 0;
+      padding: 0;
+      font-size: 13px;
+      color: red;
+
+    }
+  
+  }
+  
+  .input-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+
+   
+  }
+  .container-modal-box2-list1-item1-modalgender{
+    background-color: #007bff;
+    position: absolute;
+    width: 200px;
+    height: 65px;
+    border-radius: 5px;
+    top: 72px;
+    z-index: 5000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    border: 1px solid #555;
+    background-color: #f9f9f9;
+
+
+  }
+  .container-modal-box2-list1-item1-modalgender-cus{
+    display: none;
+  }
+  
+  .custom-input {
+    height: 40px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      border-color: #169fc5;
+    }
+  
+    &:focus {
+      border-color: #169fc5;
+      box-shadow: 0 0 6px rgba(22, 159, 197, 0.4);
+      background-color: #fff;
+    }
+  }
+
+  .custom-input-more{
+    display: flex;
+    font-size: 14px;
+    color: #8a8383;
+    justify-content: space-between;
+    .box1-list2-date{
+      display: flex;
+      gap: 8px;
+
+    }
+
+    .custom-input-modalgender{
+      width: 200px;
+      height: 150px;
+      position: absolute;
+      z-index: 999;
+      left: 0;
+      top: 74px;
+      z-index: 99999;
+      background-color: white;
+
+        .container-bookinghotel-box1-list2--list1,.container-bookinghotel-box1-list2--list2{
+      width: 100%;
+      height: 100%;
+      // display: inline-grid;
+      align-items: center;
+      position: absolute;
+
+
+      .box1-list2-text{
+          display: flex;
+
+
+      }
+      .box1-list2-date{
+          display: flex;
+          justify-content: space-between;
+          .box1-list2-date-2{
+              // background-color: #d86d15;
+              padding-left: 5px;
+              padding-right: 5px;
+              border-radius: 5px;
+
+              
+              &:hover{
+                  background-color: #d86d15;
+              padding-left: 5px;
+              padding-right: 5px;
+              border-radius: 5px;
+
+
+              }
+
+          }
+      }
+      .box1-list2-tabledate{
+          position: absolute;
+          width: 100px;
+          height: 300px;
+
+          .date-picker {
+              width: 200px;
+              height: 100%;
+              border: 1px solid #ddd;
+              border-radius: 8px;
+              overflow: hidden;
+              font-family: Arial, sans-serif;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              position: absolute;
+              z-index: 999;
+            
+              .date-picker-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px;
+                background-color: #f5f5f5;
+                font-weight: bold;
+            
+                .date-picker-nav {
+                  background: none;
+                  border: none;
+                  cursor: pointer;
+                  font-size: 18px;
+                }
+              }
+            
+              .calendar-grid {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 5px;
+                padding: 10px;
+            
+                .calendar-day-name {
+                  text-align: center;
+                  font-weight: bold;
+                  color: #333;
+                }
+            
+                .calendar-day {
+                  width: 100%;
+                  height: 40px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                  border-radius: 4px;
+                  transition: background-color 0.3s;
+            
+                  &:hover {
+                    background-color: #e0e0e0;
+                  }
+            
+                  &.selected {
+                    background-color: #3f51b5;
+                    color: white;
+                  }
+            
+                  &.empty {
+                    background-color: transparent;
+                    cursor: default;
+                  }
+                }
+              }
+            
+              .selected-date {
+                padding: 10px;
+                text-align: center;
+                font-size: 14px;
+                color: #333;
+              }
+            }
+
+
+      }
+
+     
+        
+
+  }
+    }
+
+  
+    
+  }
+  
+  .submit-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #169fc5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #0e8bb1;
+    }
+  }
+  
+  /* Hiệu ứng mở modal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .test{
+    background-color: #169fc5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  

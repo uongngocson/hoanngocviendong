@@ -1,0 +1,389 @@
+.userlist{
+    position: absolute;
+    width: 100%;
+    height: 5000px;
+    
+
+
+    .userlist-header{
+        position: absolute;
+        background-color: aliceblue;
+        width: 100%;
+        height: 169px;
+
+
+
+        .userlist-header-1{
+            position: absolute;
+            width: 100%;
+            height: 93px;
+            // background-color: green;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+            padding: 25px;
+
+            .userlist-header-1-con1{
+
+
+                .userlist-header-1-con1-item1{
+                    display: flex;
+                    font-size: 20px;
+                    font-weight: 600;
+
+
+
+                }
+                .userlist-header-1-con1-item2{
+                    display: flex;
+
+
+                }
+            }
+
+            .userlist-header-1-con2{
+                display: flex;
+                gap: 15px;
+
+
+                .userlist-header-1-con2-refresh{
+                //    background-color: aqua;
+                   padding: 5px;
+                   border-radius: 7px;
+                   display: flex;
+                   gap: 2px;
+                   justify-content: center;
+                   align-items: center;
+                   border: 1px solid gray;
+
+
+
+                }
+
+                .userlist-header-1-con2-Print{
+                    //   background-color: aqua;
+                    padding: 5px;
+                    border-radius: 7px;
+                    display: flex;
+                    gap: 2px;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid gray;
+
+ }
+
+                .userlist-header-1-con2-Export{  background-color: #DFE5EF;
+                    padding: 5px;
+                    border-radius: 7px;
+                    display: flex;
+                    gap: 2px;
+                    justify-content: center;
+                    align-items: center;
+
+ }
+
+                .userlist-header-1-con2-Add{  background-color: #3557E0;
+                    padding: 5px;
+                    border-radius: 7px;
+                    display: flex;
+                    gap: 2px;
+                    justify-content: center;
+                    align-items: center;
+                    color: #F8FAFC;
+                    font-weight: 600;
+
+ }
+            }
+
+
+
+        }
+        .userlist-header-2{
+            width: 100%;
+            height: 73px;
+            // background-color: aqua;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+
+            .userlist-header-2-con1{
+                font-size: 17px;
+                font-weight: 600;
+
+            }
+
+            .userlist-header-2-con2{
+                display: flex;
+                display: flex;
+                gap: 15px;
+                .userlist-header-2-con2-time{
+                    padding: 5px;
+                    border-radius: 7px;
+                    display: flex;
+                    gap: 2px;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid gray;
+                }
+                .userlist-header-2-con2-filter{
+                    padding: 5px;
+                    border-radius: 7px;
+                    display: flex;
+                    gap: 2px;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid gray;
+                }
+                .userlist-header-2-con2-logo{
+                    padding: 5px;
+                    border-radius: 7px;
+                    display: flex;
+                    gap: 2px;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid gray;
+                }
+                .userlist-header-2-con2-logo2{
+                    padding: 5px;
+                    border-radius: 7px;
+                    display: flex;
+                    gap: 2px;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid gray;
+                }
+                .userlist-header-2-con2-az{
+                    padding: 5px;
+                    border-radius: 7px;
+                    display: flex;
+                    gap: 2px;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid gray;
+                }
+            }
+
+
+
+        }
+
+    }
+
+    .userlist-body{
+        // position: relative;
+        // background-color:#F8FAFC ;
+        // width: 100%;
+        // height: 100%;
+        // top: 169px;
+        display: inline-grid;
+        grid-template-columns: auto auto auto auto ;
+        justify-content: space-around;
+        background-color: #3557E0;
+        width: 100%;
+        height: auto;
+        position: relative;
+        right: 0;
+        top: 172px;
+        gap: -10px;
+
+
+        .userlist-body-box1 {
+            // position: absolute;
+            margin-right: -7px;
+            width: 320px;
+            height: 330px;
+            // background-color: #F0F8FF !important;
+            display: flex;
+            padding: 25px;
+            gap: 10px;
+            // border: 1px solid gray;
+
+            .userlist-body-box1-item1{
+                display: flex;
+                flex: 1;
+                background-color: #F8FAFC;
+                 width: 100%;
+                    height: 100%;
+                    position: relative;
+                    border: 1px solid gray;
+                    border-radius: 7px;
+                    .userlist-body-box1-item1-con1{
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 70px;
+                        // background-color: gold;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px;
+                        border-bottom: 1px solid gray;
+
+
+                        .userlist-body-box1-item1-con1-cus1{
+
+                        }
+
+                        .userlist-body-box1-item1-con1-cus2{
+                            display: flex;
+                            gap: 10px;
+                            // background-color: #3557E0;
+
+                        }
+
+
+
+                    }
+                    .userlist-body-box1-item1-con2{
+                        position: absolute;
+                        top: 25%;
+                        width: 100%;
+                        height: 70px;
+                        // background-color: blueviolet;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding-left:20px ;
+                        border-bottom: 1px solid gray ;
+                        gap: 10px;
+
+                        .userlist-body-box1-item1-con2-logo{
+                            width: 45px;
+                            height: 45px;
+                            // background-color: aqua;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 24px;
+                        }
+                        .userlist-body-box1-item1-con2-box2{
+                            font-weight: 700;
+
+
+                        }
+
+
+
+                        
+                    }
+                    .userlist-body-box1-item1-con3{
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                        height: 70px;
+                        // background-color: green;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px;
+                        border-bottom: 1px solid gray ;
+
+                        .userlist-body-box1-item1-con3--list{
+                            font-weight: 700;
+
+
+                        }
+
+
+
+
+                        
+                    }
+                    .userlist-body-box1-item1-con4{
+                        position: absolute;
+                        top: 75%;
+                        width: 100%;
+                        height: 70px;
+                        // background-color: greenyellow;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 10px;
+                        align-items: center;
+
+                        .userlist-body-box1-item1-con4-item1{
+
+                            display: flex;
+                            gap: 10px;
+
+
+                        }
+                        .userlist-body-box1-item1-con4-item2{
+                            background-color: #DFE5EF;
+                            padding: 5px;
+                            border-radius: 7px;
+                            font-weight: 700;
+
+
+
+                        }
+
+
+                        
+                    }
+
+
+
+                
+
+
+
+            }
+            .userlist-body-box1-item2{
+                display: flex;
+                flex: 1;
+                // background-color: blue;
+                // border-bottom: 1px solid gray;
+
+                
+            }
+            .userlist-body-box1-item3{
+                display: flex;
+                flex: 1;
+                // background-color: blueviolet;
+                // border-bottom: 1px solid gray;
+                
+                
+                .userlist-body-box1-item1-con3{
+
+                }
+
+                
+            }
+            .userlist-body-box1-item4{
+                display: flex;
+                flex: 1;
+                // background-color: chartreuse;
+
+                
+            }
+
+
+
+
+
+
+        }
+       
+       
+
+
+    }
+    .userlist-footer{
+        width: 118px;
+        height: 38px;
+        background-color: rgb(18, 25, 237);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        left: 45%;
+        bottom: -6%;
+        border-radius: 10px;
+        color: #F8FAFC;
+        font-weight: 600;
+    }
+}

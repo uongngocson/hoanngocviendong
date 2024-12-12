@@ -1,5 +1,6 @@
 /*
  * General styles
+ Arial, Helvetica, sans-serif
  */
  body, html {
     background-image: "#fff";
@@ -9,6 +10,13 @@
     font-size: $base-size - 2px;
     height: 100vh;
     overflow: hidden;
+    text-decoration: none;
+}
+a{
+  text-decoration: none;
+  // color: inherit !important; /* Giữ lại màu chữ của phần tử cha */
+  all: unset; /* Loại bỏ toàn bộ style mặc định */
+  
 }
 
 .btn {
@@ -62,8 +70,48 @@
 #password::placeholder { 
   font-family: $fontmain;
 }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh; /* Chiều cao toàn màn hình */
+}
 
 .content-container {
+  overflow-y: auto; /* Thêm thanh cuộn dọc */
+  scrollbar-width: thin; /* Kiểu thanh cuộn mỏng (cho Firefox) */
+  scrollbar-color: #ccc transparent; /* Màu thanh cuộn (cho Firefox) */
+  // .content-container-message{
+  //   position: absolute;
+  //   background-color: aqua;
+  //   position: fixed;
+  //   left: 0;
+
+  // }
+}
+
+.content-container::-webkit-scrollbar {
+  width: 10px; /* Độ rộng thanh cuộn */
+}
+
+.content-container::-webkit-scrollbar-track {
+  background: transparent; /* Nền thanh cuộn */
+}
+
+.content-container::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Màu thanh cuộn */
+  border-radius: 10px; /* Bo tròn thanh cuộn */
+  border: 2px solid transparent; /* Viền trong suốt */
+  background-clip: content-box; /* Giữ hình dạng */
+}
+
+
+
+.content-container {
+
+  
+  
+  
   .title {
     text-align: center;
     text-transform: uppercase;

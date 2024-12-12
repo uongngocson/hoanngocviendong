@@ -1,0 +1,43 @@
+.modal-overlay {
+    background-color: rgb(45, 224, 9);
+      width: 500px;
+      height: 500px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000; // Đặt z-index cao hơn lớp phủ
+      position: relative;
+  
+    
+  
+     
+  
+        .modal-close-btn {
+          background: none;
+          border: none;
+          font-size: 1.5rem;
+          cursor: pointer;
+          color: black; // Màu sắc của nút tắt
+        }
+       
+      
+    }
+
+    .modal-close-btn-cus{
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: black; // Màu sắc của nút tắt
+      width: 100%;
+      height: 100%;
+      background-color: rgb(88, 17, 230);
+      position: absolute;
+      top: 0;
+
+
+
+
+    }
+  
+  

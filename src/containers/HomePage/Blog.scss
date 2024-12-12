@@ -1,0 +1,113 @@
+.indochinaqueen-main-blog{
+    // background-color: aqua;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .indochinaqueen-main-blog-header{
+        width: 100%;
+        height: auto;
+        position: relative;
+        .indochinaqueen-main-blog-header-navbar{
+            width: 80%;
+            height: 70px;
+            background-color: #FFF;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            justify-content: space-between;
+            margin: 0 auto;
+            margin-top: -40px;
+            padding-left:5px ;
+            padding-right: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            
+
+            .navbar-new1{
+                background-color: #16A8FF;
+                height: 70px;
+                width: 235px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.063em;
+                font-weight: 700;
+            }
+          
+          
+        }
+
+    }
+    .indochinaqueen-main-body{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .indochinaqueen-main-body-box1{
+            width: 80%;
+            display: grid;
+            // justify-content: center;
+            background-color: #FFF;
+            margin: 0 auto;
+            padding-left: 5px;
+            padding-right: 5px;
+            position: relative;
+            margin-top: 10px;
+            grid-template-rows: 50px 200px 200px,auto; /* Tự động điều chỉnh chiều cao */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            gap: 15px;
+
+            .indochinaqueen-main-body-news1{
+                background-color: #FFFFFF;
+                width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+
+            }
+            .indochinaqueen-main-body-news{
+                // background-color: rgb(32, 131, 198);
+                width: 100%;
+                position: relative;
+                display: flex;
+                gap: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+                .indochinaqueen-main-body-news-item2{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .indochinaqueen-main-body-news-item2-list1{
+                        font-size: 1.5em;
+                        text-transform: uppercase;
+                        color: #413831;
+                        font-weight: bold;
+    
+                    }
+                    .indochinaqueen-main-body-news-item2-list2{
+                        font-size: 1em;
+                        text-transform: uppercase;
+                        color: #413831;
+                        font-weight: bold;
+    
+                    }
+                    .indochinaqueen-main-body-news-item2-list3{
+                        font-size: 1em;
+                        font-weight: 500;
+    
+                    }
+
+
+                }
+              
+
+
+            }
+
+
+        }
+
+    }
+}

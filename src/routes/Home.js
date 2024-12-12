@@ -6,10 +6,22 @@ class Home extends Component {
 
     render() {
         const { isLoggedIn } = this.props;
-        let linkToRedirect = isLoggedIn ? '/system/user-manage' : '/login';
+        const { checkLogin } = this.props
+        let linkToRedirect = isLoggedIn ? '/system/user-manage' : '/home'; // /system/user-manage
+        let linkToRedirect1 = checkLogin ? '/home' : '/vi/login'; // /system/user-manage
+
 
         return (
-            <Redirect to={linkToRedirect} />
+            <React.Fragment>
+                <Redirect to={linkToRedirect} />
+                <Redirect to={linkToRedirect1} />
+
+            </React.Fragment>
+
+
+
+
+
         );
     }
 
@@ -17,7 +29,9 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.admin.isLoggedIn
+        isLoggedIn: state.admin.isLoggedIn,
+        checkLogin: state.admin.checkLogin
+
     };
 };
 

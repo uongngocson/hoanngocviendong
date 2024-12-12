@@ -4,16 +4,10 @@ import { connect } from 'react-redux';
 import { divide } from 'lodash';
 import './BookingHotel.scss';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
-import { getAllstypeRoom } from '.../../../src/services/userService'
-import { getAllUserBooking } from '.../../../src/services/userService'
-import { gettAllRoom } from '.../../../src/services/userService'
-import { createDetailBooking } from '.../../../src/services/userService'
-
-
-
-
-
-
+import { getAllstypeRoom } from '../../../services/userService'
+import { getAllUserBooking } from '../../../services/userService'
+import { gettAllRoom } from '../../../services/userService'
+import { createPhieuDP } from '../../../services/userService'
 
 
 
@@ -24,12 +18,15 @@ class BookingHotel extends Component {
             currentDate: new Date(),
             selectedDate: null,
             selectedDate1: null,
-            selectedDate2: null,
-            selectedDate3: null,
+            dayNhanRoom: null,
+            dayTraRoom: null,
+            dayBirth: null,
+
             datepicker1: false,
             datepicker2: false,
             datepicker3: false,
             datepicker4: false,
+            datepicker5: false,
             valueStypeRoom: [],
             test: [1, 2, 3],
             getAllUserBooking: [],
@@ -50,7 +47,23 @@ class BookingHotel extends Component {
             listRoomReady: false,
             handleChoosenRoom: [],
             listRoomChoosen: [],
-            allRoomChoosen: []
+            allRoomChoosen: [],
+            hoverBookingRoom: true,
+            selectedIndexes: [], // Lưu các index đã được chọn
+            inputValue: "",
+            errorFirstname: "",
+            errorLastname: "",
+            errorFullname: "",
+            errorCmnd: "",
+            errorNumberphone: "",
+            errorEmail: "",
+            errorAddress: "",
+            nam: "",
+            nu: "",
+            other: "",
+            handleGender: true,
+            ghichu: "",
+            moneyBooking: ""
 
 
 
@@ -75,6 +88,37 @@ class BookingHotel extends Component {
         this.handleAllRoom()
 
     }
+
+    hoverBookingRoom = (index) => {
+        this.setState((prevState) => {
+            const { selectedIndexes } = prevState;
+
+            // Kiểm tra nếu index đã có trong mảng
+
+            // Nếu chưa có, thêm index vào mảng
+            return {
+                selectedIndexes: [...selectedIndexes, index],
+            };
+
+        });
+    };
+
+    //handle choosen gender
+    handleClickGender = () => {
+        this.setState((prev) => ({
+            ...prev,
+            handleGender: !prev.handleGender
+
+
+
+
+
+
+        }))
+
+
+    }
+
 
     createbooking = () => {
         this.setState((prev) => ({
@@ -224,12 +268,19 @@ class BookingHotel extends Component {
         }
         ))
     }
+    datepicker5 = () => {
+        this.setState((prev) => ({
+            datepicker5: !prev.datepicker5,
+        }
+        ))
+    }
 
     handleDateClick2 = (day) => {
         const { currentDate } = this.state;
-        const selectedDate2 = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+        const dayNhanRoom = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+        const check = dayNhanRoom.toLocaleDateString('ja-JP');
         this.setState({
-            selectedDate2,
+            dayNhanRoom: check,
             datepicker3: false
         });
     };
@@ -269,9 +320,11 @@ class BookingHotel extends Component {
 
     handleDateClick3 = (day) => {
         const { currentDate } = this.state;
-        const selectedDate3 = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+        const dayTraRoom = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+        const check = dayTraRoom.toLocaleDateString('ja-JP');
+
         this.setState({
-            selectedDate3,
+            dayTraRoom: check,
             datepicker4: false
         });
     };
@@ -309,6 +362,51 @@ class BookingHotel extends Component {
         return daysArray;
     };
 
+    handleDateClick5 = (day) => {
+        const { currentDate } = this.state;
+        const dayBirth6 = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+        const check = dayBirth6.toLocaleDateString('ja-JP');
+        console.log('test check tranlation', check)
+
+        this.setState({
+            dayBirth: check,
+            datepicker5: false
+        });
+    };
+
+    // Thay đổi tháng khi nhấn vào nút next hoặc previous
+    changeMonth5 = (offset) => {
+        const { currentDate } = this.state;
+        const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + offset, 1);
+        this.setState({ currentDate: newDate });
+    };
+
+    renderDays5 = () => {
+        const { currentDate } = this.state;
+        const daysInMonth = this.daysInMonth(currentDate.getMonth(), currentDate.getFullYear());
+        const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
+        const daysArray = [];
+
+        // Tạo các ô trống cho các ngày trước ngày đầu tiên của tháng
+        for (let i = 0; i < firstDay; i++) {
+            daysArray.push(<div key={`empty-${i}`} className="calendar-day empty"></div>);
+        }
+
+        // Tạo các ô cho ngày trong tháng
+        for (let day = 1; day <= daysInMonth; day++) {
+            daysArray.push(
+                <div
+                    key={day}
+                    className="calendar-day"
+                    onClick={() => this.handleDateClick5(day)}
+                >
+                    {day}
+                </div>
+            );
+        }
+        return daysArray;
+    };
+
     modalcreate = () => {
         this.setState((prev) => ({
             modalcreate: !prev.modalcreate
@@ -327,41 +425,173 @@ class BookingHotel extends Component {
 
 
         }
+    // Hàm kiểm tra giá trị
 
-    // firstname = (event, name) => {
-    //     console.log('name', name)
+    // Xử lý thay đổi đầu vào
+    // handleChange = (e) => {
+    //     let value = isValidText(e.target.value);
+    //     this.setState({ inputValue: value });
 
-    //     this.setState({
-    //         firstname: event.target.value
-    //     })
-    // }
+    //     if (!this.value) {
+    //         this.setState({ error: "Chỉ được nhập chữ và không chứa ký tự đặc biệt!" });
+    //     } else {
+    //         this.setState({ error: "" });
+    //     }
+    // };
+
+
+    handleCheckInput = (name, value) => {
+        if (!value || typeof value !== "string") return false; // Kiểm tra giá trị cơ bản.
+
+        // Định nghĩa các regex tương ứng với từng loại input
+        const validators = {
+            firstname: /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểễỆỈỊọỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸỳỵỷỹ\s]+$/,
+            lastname: /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểễỆỈỊọỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸỳỵỷỹ\s]+$/,
+            fullname: /^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểễỆỈỊọỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸỳỵỷỹ\s]+$/,
+            cmnd: /^\d+$/,
+            datebirth: "",
+            numberphone: /^\d+$/,
+            email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+            address: /^[a-zA-Z0-9]+$/,
+        };
+
+        // Lấy regex tương ứng và kiểm tra
+        const regex = validators[name];
+        return regex ? regex.test(value.trim()) : false; // Nếu không tìm thấy validator thì trả về false.
+    };
+
+    handleCheckInputTrue = (event) => {
+
+    }
+
+
+
+
+
+
+
     handleChange = (event) => {
         const { name, value } = event.target;
-        this.setState((prevData) => ({
-            ...prevData,
-            [name]: value
+
+        // Đối tượng ánh xạ thông báo lỗi
+        const errorMessages = {
+            firstname: "Nhập chữ không kí tự đặc biệt",
+            lastname: "Nhập chữ không kí tự đặc biệt",
+            fullname: "Nhập chữ không kí tự đặc biệt",
+            cmnd: "Nhập số CMND 9 hoặc 13",
+            numberphone: "Nhập số điện thoại",
+            email: "Email chưa đúng",
+            address: "Nhập chữ và số đúng"
+        };
+
+
+        // Kiểm tra đầu vào
+        const isValid = this.handleCheckInput(name, value);
+        console.log("check errorMassage", errorMessages[name])
+
+        // Cập nhật lỗi cụ thể dựa trên name `error${name.charAt(0).toUpperCase() + name.slice(1)}`
+        this.setState((prevState) => ({
+            ...prevState,
+            [name]: value,
+            [`error${name.charAt(0).toUpperCase() + name.slice(1)}`]: isValid
+                ? ""
+                : errorMessages[name]
         }));
     };
 
+
     handleGetAllClient = () => {
+
+        this.setState((prev) => ({
+            modalcreate: !prev.modalcreate
+
+        }))
+
+        // let allClient = [];
+        // const { firstname, lastname, fullname, cmnd, gender, numberphone, email, address, dayBirth } = this.state;
+
+        // // Đưa các giá trị vào đối tượng
+        // let client = {
+        //     firstname: firstname,
+        //     lastname: lastname,
+        //     fullname: fullname,
+        //     cmnd: cmnd,
+        //     gender: gender,
+        //     numberphone: numberphone,
+        //     email: email,
+        //     address: address,
+        //     dayBirth: dayBirth
+        // };
+
+        // // Thêm đối tượng vào mảng
+        // allClient.push(client);
+
+        // // Cập nhật state
+        // this.setState({ allclient: allClient });
+
+    };
+
+    // handlecreatePhieuDP = async () => {
+    //     try {
+    //         let checkcreateDP = await createPhieuDP();
+    //         console.log(checkcreateDP)
+
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+    handleSaveAllClinet = () => {
         try {
-            let allClient = []
-            const { firstname, lastname, fullname, cmnd, gender, datebirth, numberphone, email, address } = this.state
-            allClient.push(firstname, lastname, fullname, cmnd, gender, datebirth, numberphone, email, address)
-            this.setState({ allclient: allClient }, () => {
-                // Callback sau khi setState hoàn tất
-                createDetailBooking(this.state.allclient);
+            const allclient = this.state.allclient
+            console.log('state trong lưu nè', allclient)
+            const { firstname, lastname, fullname, cmnd, gender, numberphone, email, address, dayBirth, dayNhanRoom, dayTraRoom, ghichu, allRoomChoosen, moneyBooking } = this.state
+            let client = {
+                firstname: firstname,
+                lastname: lastname,
+                fullname: fullname,
+                cmnd: cmnd,
+                gender: gender,
+                numberphone: numberphone,
+                email: email,
+                address: address,
+                dayBirth: dayBirth,
+                dayNhanRoom: dayNhanRoom,
+                dayTraRoom: dayTraRoom,
+                ghichu: ghichu,
+                allRoomChoosen: allRoomChoosen,
+                moneyBooking: moneyBooking,
+
+            };
+            allclient.push(client)
+            this.setState({ allclient: allclient }, async () => {
+
+                try {
+                    const checkcreateDP = await createPhieuDP(this.state.allclient);
+                    if (checkcreateDP.errCode == 1) {
+                        console.log('Thành công:', checkcreateDP); // In ra nếu thành công
+
+                        this.getAllStypeRoom()
+                        this.getAllUserBooking()
+                        this.handleAllRoom()
+
+                    } else {
+                        console.log("Đù má chưa được")
+
+                    }
+
+
+                } catch (error) {
+                    console.log("Tạo thất bại mẹ rồi")
+                    console.log('vào đây nè má', error)
+
+                }
             });
 
-
-
         } catch (error) {
+            console.log('vào đây nè')
             console.log(error)
 
         }
-
-        // alert(this.state.allclient)
-
 
     }
 
@@ -379,19 +609,80 @@ class BookingHotel extends Component {
         })
     }
     // handleChoosenRoom
+    handleChoosenRoomMove = (event) => {
+        console.log('this is choosen room', event.target.value);
+        const { allRoomChoosen = [] } = this.state;
+
+        console.log('this is choosen room remove', allRoomChoosen);
+        const { MAP, MOTA, INDEX } = JSON.parse(event.target.value);
+        console.log('check lại xem sao', MAP);
+        console.log('check lại xem sao', MOTA);
+
+
+        // Kiểm tra nếu giá trị đã tồn tại trong danh sách
+        if (allRoomChoosen.some(item => item.MAP === MAP)) {
+            console.log('This is choosen room yes');
+
+            // Tìm vị trí của phần tử cần xóa
+            const check = allRoomChoosen.findIndex(item => item.MAP === MAP);
+            console.log('Vị trí:', check);
+
+            if (check !== -1) {
+                // Tạo bản sao mới của mảng (tránh sửa trực tiếp)
+                const updatedRoomList = [...allRoomChoosen];
+                const removedItem = updatedRoomList.splice(check, 1); // Xóa phần tử tại vị trí tìm được
+                console.log('Đã xóa:', removedItem);
+
+                // Cập nhật state với mảng mới
+                this.setState((prev) => ({
+                    ...prev,
+                    allRoomChoosen: updatedRoomList,
+                }));
+            }
+
+            // Xử lý cập nhật `selectedIndexes`
+            this.setState((prevState) => {
+                const { selectedIndexes } = prevState;
+                console.log('Check remove INDEX:', INDEX);
+
+                // Xóa index khỏi mảng selectedIndexes
+                return {
+                    selectedIndexes: selectedIndexes.filter((i) => i !== INDEX),
+                };
+            });
+        } else {
+            console.log('Không tồn tại');
+        }
+
+    };
+
     handleChoosenRoom = (event) => {
         // Lấy danh sách hiện tại từ state
         const { allRoomChoosen = [] } = this.state;
 
         // Lấy giá trị JSON từ sự kiện và phân tích nó
-        const { MAP, MOTA } = JSON.parse(event.target.value);
+        const { MAP, MOTA, INDEX, Dongia } = JSON.parse(event.target.value);
         console.log('check lại xem sao', MAP);
-        console.log('check lại xem sao', MOTA);
+        console.log('check lại xem sao cmm', INDEX);
+        console.log('check lại giá xem sao cmm', Dongia);
+
+
+        this.setState((prevState) => {
+            const { selectedIndexes } = prevState;
+
+            // Kiểm tra nếu index đã có trong mảng
+
+            // Nếu chưa có, thêm index vào mảng
+            return {
+                selectedIndexes: [...selectedIndexes, INDEX],
+            };
+
+        });
 
         // Kiểm tra nếu MAP chưa có trong danh sách allRoomChoosen
         if (!allRoomChoosen.some(item => item.MAP === MAP)) {
             // Thêm đối tượng mới vào mảng
-            allRoomChoosen.push({ MAP, MOTA });
+            allRoomChoosen.push({ MAP, MOTA, Dongia });
 
             console.log('This is choosen room:', allRoomChoosen);
 
@@ -406,27 +697,24 @@ class BookingHotel extends Component {
 
 
 
-    // handleChoosenRoom = (event) => {
-    //     // Lấy danh sách hiện tại từ state
-    //     const { allRoomChoosen = [] } = this.state;
+    handleGender = (event) => {
+        const value = event.target.dataset.value; // Lấy giá trị từ data-value
+        const name = event.target.dataset.name; // Lấy giá trị từ data-name
+        this.setState((prev) => ({
+            ...prev,
+            [value]: name,
+            handleGender: !prev.handleGender
 
-    //     // Lấy giá trị mới từ sự kiện
-    //     const newRoom = event.target.value;
 
-    //     // Kiểm tra nếu giá trị chưa tồn tại trong mảng thì mới thêm
-    //     if (!allRoomChoosen.includes(newRoom)) {
-    //         allRoomChoosen.push(newRoom);
 
-    //         console.log('This is choosen room:', allRoomChoosen);
+        }))
 
-    //         // Cập nhật state
-    //         this.setState({
-    //             allRoomChoosen: [...allRoomChoosen], // Tạo mảng mới từ mảng đã thay đổi
-    //         });
-    //     } else {
-    //         console.log('Room already chosen:', newRoom);
-    //     }
-    // };
+        console.log("Value:", value); // Debug giá trị
+        console.log("Name:", name); // Debug tên
+
+    };
+
+
 
 
 
@@ -437,7 +725,7 @@ class BookingHotel extends Component {
 
     render() {
 
-        const { currentDate, selectedDate, selectedDate1, getAllUserBooking, selectedDate2, selectedDate3 } = this.state;
+        const { currentDate, selectedDate, selectedDate1, getAllUserBooking, dayNhanRoom, dayTraRoom, dayBirth } = this.state;
         const monthYear = currentDate.toLocaleDateString('vi-VN', { month: 'numeric', year: 'numeric' });
         console.log("check state allbooking ", this.state.getAllUserBooking)
         console.log('allclient', this.state.allclient)
@@ -458,6 +746,12 @@ class BookingHotel extends Component {
         console.log('address', this.state.address)
         console.log('firstname', this.state.fullname)
         console.log('all room from state', this.state.allRoom)
+        console.log('error check ', this.state.error)
+        console.log('Check daybirth', this.state.dayBirth)
+        console.log('check ghi chu', this.state.ghichu)
+
+
+
 
 
 
@@ -635,56 +929,68 @@ class BookingHotel extends Component {
 
 
                         </div>
+
+
+
+
+
+
                         {this.state.listRoomReady && <div className='container-bookinghotel-box1-list4'>
                             <div>
                                 <div className=''>PHÒNG STANDARD TRỐNG </div>
 
                                 <div className='container-bookinghotel-box1-list4-item1'>
 
+
                                     {this.state.allRoom.map((item, index) => (
-                                        ((item.MATT == 1 && item.MALP == 1) && <div className='container-bookinghotel-box1-list4-item1-room-row'>
-                                            <div className='item1-date'>
-                                                <div className='item1-date--list1'>
-                                                    <div className=''>PHÒNG:{item.MAP}</div>
-                                                    <div className=''> TẦNG:{item.Tang}</div>
+                                        ((item.MATT == 1 && item.MALP == 1) &&
+                                            <div className='container-bookinghotel-box1-list4-item1-room-row'>
+                                                <div key={index}
+                                                    // onClick={() => this.hoverBookingRoom(index)}
+                                                    className={
+                                                        this.state.selectedIndexes.includes(index)
+                                                            ? 'item1-date active'
+                                                            : 'item1-date'
+                                                    }>
+                                                    <div className='item1-date--list1'>
+                                                        <div className=''>PHÒNG:{item.MAP}</div>
+                                                        <div className=''>TẦNG:{item.Tang}</div>
+                                                        <div className=''>TẦNG</div>
+                                                    </div>
+                                                    <div className='item1-date--list1'>
+                                                        <div className=''>{item.MOTA}</div>
+                                                        <div className=''> {item.Dongia}Đ  </div>
 
+
+                                                    </div>
+                                                    <div className='item1-date--list1'>
+                                                        <div className=''>Trạng thái:</div>
+                                                        <div className=''> {
+                                                            (item.MATT == 1 && "Sẵn Sàng") ||
+                                                            (item.MATT == 2 && "Chưa Dọn") ||
+                                                            (item.MATT == 3 && "Đã Đặt ") ||
+                                                            (item.MATT == 4 && "Bảo Trì") ||
+                                                            (item.MATT == 5 && "Đang Thuê")
+
+
+
+                                                        }</div>
+
+
+
+                                                    </div>
+                                                    <div className='item1-date--list1'>
+                                                        <div className=''>Lựa Chọn</div>
+                                                        <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA, INDEX: index, Dongia: item.Dongia })} onClick={this.handleChoosenRoom}
+                                                            class="custom-button">Chosen </button>
+                                                        <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA, INDEX: index, Dongia: item.Dongia })} onClick={this.handleChoosenRoomMove} class="custom-button custom-button-move "> Move </button>
+
+                                                    </div>
 
 
                                                 </div>
-                                                <div className='item1-date--list1'>
-                                                    <div className=''>{item.MOTA}</div>
-                                                    <div className=''> </div>
 
-
-                                                </div>
-                                                <div className='item1-date--list1'>
-                                                    <div className=''>Trạng thái:</div>
-                                                    <div className=''> {
-                                                        (item.MATT == 1 && "Sẵn Sàng") ||
-                                                        (item.MATT == 2 && "Chưa Dọn") ||
-                                                        (item.MATT == 3 && "Đã Đặt ") ||
-                                                        (item.MATT == 4 && "Bảo Trì") ||
-                                                        (item.MATT == 5 && "Đang Thuê")
-
-
-
-                                                    }</div>
-
-
-
-                                                </div>
-                                                <div className='item1-date--list1'>
-                                                    <div className=''>Lựa Chọn</div>
-                                                    <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA })} onClick={this.handleChoosenRoom}
-                                                        class="custom-button">Chosen </button>
-                                                    <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA })} onClick={this.handleChoosenRoomMove} class="custom-button custom-button-move "> Move </button>
-
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>)
+                                            </div>)
 
 
 
@@ -707,7 +1013,13 @@ class BookingHotel extends Component {
 
                                         {this.state.allRoom.map((item, index) => (
                                             ((item.MATT == 1 && item.MALP == 2) && <div className='container-bookinghotel-box1-list4-item1-room-row'>
-                                                <div className='item1-date'>
+                                                <div key={index}
+                                                    // onClick={() => this.hoverBookingRoom(index)}
+                                                    className={
+                                                        this.state.selectedIndexes.includes(index)
+                                                            ? 'item1-date active'
+                                                            : 'item1-date'
+                                                    }>
                                                     <div className='item1-date--list1'>
                                                         <div className=''>PHÒNG:{item.MAP}</div>
                                                         <div className=''> TẦNG:{item.Tang}</div>
@@ -717,7 +1029,7 @@ class BookingHotel extends Component {
                                                     </div>
                                                     <div className='item1-date--list1'>
                                                         <div className=''>{item.MOTA}</div>
-                                                        <div className=''> </div>
+                                                        <div className=''>{item.Dongia}Đ </div>
 
 
                                                     </div>
@@ -739,9 +1051,9 @@ class BookingHotel extends Component {
                                                     </div>
                                                     <div className='item1-date--list1'>
                                                         <div className=''>Lựa Chọn</div>
-                                                        <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA })}
-                                                            class="custom-button">Chosen </button>
-                                                        <button value={item.MAP} onClick={this.handleChoosenRoomMove} class="custom-button custom-button-move "> Move </button>
+                                                        <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA, INDEX: index, Dongia: item.Dongia })}
+                                                            onClick={this.handleChoosenRoom} class="custom-button">Chosen </button>
+                                                        <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA, INDEX: index, Dongia: item.Dongia })} onClick={this.handleChoosenRoomMove} class="custom-button custom-button-move "> Move </button>
 
                                                     </div>
 
@@ -773,7 +1085,13 @@ class BookingHotel extends Component {
 
                                         {this.state.allRoom.map((item, index) => (
                                             ((item.MATT == 1 && item.MALP == 3) && <div className='container-bookinghotel-box1-list4-item1-room-row'>
-                                                <div className='item1-date'>
+                                                <div key={index}
+                                                    // onClick={() => this.hoverBookingRoom(index)}
+                                                    className={
+                                                        this.state.selectedIndexes.includes(index)
+                                                            ? 'item1-date active'
+                                                            : 'item1-date'
+                                                    }>
                                                     <div className='item1-date--list1'>
                                                         <div className=''>PHÒNG:{item.MAP}</div>
                                                         <div className=''> TẦNG:{item.Tang}</div>
@@ -783,7 +1101,7 @@ class BookingHotel extends Component {
                                                     </div>
                                                     <div className='item1-date--list1'>
                                                         <div className=''>{item.MOTA}</div>
-                                                        <div className=''> </div>
+                                                        <div className=''> {item.Dongia}Đ</div>
 
 
                                                     </div>
@@ -805,9 +1123,8 @@ class BookingHotel extends Component {
                                                     </div>
                                                     <div className='item1-date--list1'>
                                                         <div className=''>Lựa Chọn</div>
-                                                        <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA })}
-                                                            onClick={this.handleChoosenRoom} class="custom-button">Chosen </button>
-                                                        <button value={item.MAP} onClick={this.handleChoosenRoomMove} class="custom-button custom-button-move "> Move </button>
+                                                        <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA, INDEX: index, Dongia: item.Dongia })} onClick={this.handleChoosenRoom} class="custom-button">Chosen </button>
+                                                        <button value={JSON.stringify({ MAP: item.MAP, MOTA: item.MOTA, INDEX: index, Dongia: item.Dongia })} onClick={this.handleChoosenRoomMove} class="custom-button custom-button-move "> Move </button>
 
                                                     </div>
 
@@ -830,19 +1147,10 @@ class BookingHotel extends Component {
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
                         </div>}
                         {this.state.listBookingRoom && <div className='container-bookinghotel-box1-list4'>
                             <div>
-                                <div className=''>DANH SÁCH PHIẾU ĐẶT STANDARD</div>
+                                <div className='container-bookinghotel-box1-list4-text'>DANH SÁCH PHIẾU ĐẶT STANDARD</div>
 
                                 <div className='container-bookinghotel-box1-list4-item1'>
 
@@ -852,6 +1160,20 @@ class BookingHotel extends Component {
                                                 <div className='item1-date--list1'>
                                                     <div className=''>PHÒNG:{item.MAP}</div>
                                                     <div className=''> TẦNG:{item.Tang}</div>
+                                                    <div className=''>
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                        <div className='item1-date--list1--modal'>
+                                                            <div className=''>Chỉnh sửa</div>
+                                                            <div className=''>Nhận phòng</div>
+                                                            <div className=''>Trả phòng</div>
+                                                            <div className=''>Xóa</div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+
 
 
 
@@ -902,7 +1224,7 @@ class BookingHotel extends Component {
                                 </div>
                             </div>
                             <div>
-                                <div className=''>DANH SÁCH PHIẾU ĐẶT VIP</div>
+                                <div className='container-bookinghotel-box1-list4-text'>DANH SÁCH PHIẾU ĐẶT VIP</div>
 
                                 <div className='container-bookinghotel-box1-list4-item1'>
 
@@ -962,8 +1284,8 @@ class BookingHotel extends Component {
                                 </div>
                             </div>
 
-                            <div>
-                                <div className=''>DANH SÁCH PHIẾU ĐẶT SUPER</div>
+                            <div className='container-bookinghotel-box1-list4-margin' >
+                                <div className='container-bookinghotel-box1-list4-text'>DANH SÁCH PHIẾU ĐẶT SUPER</div>
 
                                 <div className='container-bookinghotel-box1-list4-item1'>
 
@@ -1042,170 +1364,196 @@ class BookingHotel extends Component {
 
 
                     </div>
-                    {this.state.createbooking && <div className='container-bookinghotel-box2'>
+                    {this.state.createbooking &&
+                        <div className='container-bookinghotel-box2'>
 
-                        <div className='container-bookinghotel-box2-list1'>
-                            <div className='container-bookinghotel-box2-list1-item1'>ĐẶT PHÒNG</div>
-                            <div className='container-bookinghotel-box2-list1-item2'><i class="fa-solid fa-floppy-disk"></i>&nbsp;LƯA</div>
+                            <div className='container-bookinghotel-box2-list1'>
+                                <div className='container-bookinghotel-box2-list1-item1'>ĐẶT PHÒNG</div>
+                                <div onClick={this.handleSaveAllClinet} className='container-bookinghotel-box2-list1-item2'><i class="fa-solid fa-floppy-disk"></i>&nbsp;LƯA</div>
 
-                        </div>
-                        <div className='container-bookinghotel-box2-list2'>
-                            <div className=''>Thông tin khách hàng</div>
-                            <div onClick={this.modalcreate} className=''><i class="fa-solid fa-user-plus"></i></div>
+                            </div>
+                            <div className='container-bookinghotel-box2-list2'>
+                                <div className=''>Thông tin khách hàng</div>
+                                <div onClick={this.modalcreate} className=''><i class="fa-solid fa-user-plus"></i></div>
 
 
-                        </div>
-                        <div className='container-bookinghotel-box2-list3'>
-                            <div className='box2-list3'>
-                                <div className='box2-list3-item1'>Ngày nhận phòng</div>
-                                <div className='box2-list3-item2'>
-                                    <div className=''>{selectedDate2 ? (
-                                        <div className="selected-date">
-                                            {selectedDate2.toLocaleDateString('vi-VN')}
-                                        </div>
-                                    ) : (`${day}/${month}/ ${year}`)}</div>
-                                    <div onClick={this.datepicker3} className=''><i class="fa-regular fa-calendar"></i></div>
-                                </div>
-                                {this.state.datepicker3 && <div className='box2-list3-item2-date'>
-                                    <div className='box1-list2-tabledate'>
-
-                                        <div className="date-picker">
-                                            <div className="date-picker-header">
-                                                <button onClick={() => this.changeMonth(-1)} className="date-picker-nav">{"<"}</button>
-                                                <span>{monthYear}</span>
-                                                <button onClick={() => this.changeMonth(1)} className="date-picker-nav">{">"}</button>
+                            </div>
+                            <div className='container-bookinghotel-box2-list3'>
+                                <div className='box2-list3'>
+                                    <div className='box2-list3-item1'>Ngày nhận phòng</div>
+                                    <div className='box2-list3-item2'>
+                                        <div className=''>{dayNhanRoom ? (
+                                            <div className="selected-date">
+                                                {dayNhanRoom}
                                             </div>
-                                            <div className="calendar-grid">
-                                                {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((day, index) => (
-                                                    <div key={index} className="calendar-day-name">
-                                                        {day}
-                                                    </div>
-                                                ))}
-                                                {this.renderDays2()}
-                                            </div>
-                                            {selectedDate && (
-                                                <div className="selected-date">
-                                                    Ngày đã chọn: {selectedDate.toLocaleDateString('vi-VN')}
+                                        ) : (`${day}/${month}/ ${year}`)}</div>
+                                        <div onClick={this.datepicker3} className=''><i class="fa-regular fa-calendar"></i></div>
+                                    </div>
+                                    {this.state.datepicker3 && <div className='box2-list3-item2-date'>
+                                        <div className='box1-list2-tabledate'>
+
+                                            <div className="date-picker">
+                                                <div className="date-picker-header">
+                                                    <button onClick={() => this.changeMonth(-1)} className="date-picker-nav">{"<"}</button>
+                                                    <span>{monthYear}</span>
+                                                    <button onClick={() => this.changeMonth(1)} className="date-picker-nav">{">"}</button>
                                                 </div>
-                                            )}
-                                        </div>
-
-
-                                    </div>
-
-
-                                </div>}
-
-                            </div>
-                            <div className='box2-list3'>
-                                <div className='box2-list3-item1'>Ngày trả phòng</div>
-                                <div className='box2-list3-item2'>
-                                    <div className=''> <div className=''>{selectedDate3 ? (
-                                        <div className="selected-date">
-                                            {selectedDate3.toLocaleDateString('vi-VN')}
-                                        </div>
-                                    ) : (`${day}/${month}/ ${year}`)}</div>
-                                    </div>
-                                    <div onClick={this.datepicker4} className=''><i class="fa-regular fa-calendar"></i></div>
-                                </div>
-                                {this.state.datepicker4 && <div className='box2-list3-item2-date box2-list3-item2-date-cus'>
-                                    <div className='box1-list2-tabledate'>
-
-                                        <div className="date-picker">
-                                            <div className="date-picker-header">
-                                                <button onClick={() => this.changeMonth(-1)} className="date-picker-nav">{"<"}</button>
-                                                <span>{monthYear}</span>
-                                                <button onClick={() => this.changeMonth(1)} className="date-picker-nav">{">"}</button>
-                                            </div>
-                                            <div className="calendar-grid">
-                                                {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((day, index) => (
-                                                    <div key={index} className="calendar-day-name">
-                                                        {day}
-                                                    </div>
-                                                ))}
-                                                {this.renderDays3()}
-                                            </div>
-                                            {selectedDate3 && (
-                                                <div className="selected-date">
-                                                    Ngày đã chọn: {selectedDate3.toLocaleDateString('vi-VN')}
+                                                <div className="calendar-grid">
+                                                    {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((day, index) => (
+                                                        <div key={index} className="calendar-day-name">
+                                                            {day}
+                                                        </div>
+                                                    ))}
+                                                    {this.renderDays2()}
                                                 </div>
-                                            )}
+                                                {selectedDate && (
+                                                    <div className="selected-date">
+                                                        Ngày đã chọn: {dayNhanRoom}
+                                                    </div>
+                                                )}
+                                            </div>
+
+
                                         </div>
+
+
+                                    </div>}
+
+                                </div>
+                                <div className='box2-list3'>
+                                    <div className='box2-list3-item1'>Ngày trả phòng</div>
+                                    <div className='box2-list3-item2'>
+                                        <div className=''> <div className=''>{dayTraRoom ? (
+                                            <div className="selected-date">
+                                                {dayTraRoom}
+                                            </div>
+                                        ) : (`${day}/${month}/ ${year}`)}</div>
+                                        </div>
+                                        <div onClick={this.datepicker4} className=''><i class="fa-regular fa-calendar"></i></div>
+                                    </div>
+                                    {this.state.datepicker4 && <div className='box2-list3-item2-date box2-list3-item2-date-cus'>
+                                        <div className='box1-list2-tabledate'>
+
+                                            <div className="date-picker">
+                                                <div className="date-picker-header">
+                                                    <button onClick={() => this.changeMonth(-1)} className="date-picker-nav">{"<"}</button>
+                                                    <span>{monthYear}</span>
+                                                    <button onClick={() => this.changeMonth(1)} className="date-picker-nav">{">"}</button>
+                                                </div>
+                                                <div className="calendar-grid">
+                                                    {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((day, index) => (
+                                                        <div key={index} className="calendar-day-name">
+                                                            {day}
+                                                        </div>
+                                                    ))}
+                                                    {this.renderDays3()}
+                                                </div>
+                                                {dayTraRoom && (
+                                                    <div className="selected-date">
+                                                        Ngày đã chọn: {dayTraRoom}
+                                                    </div>
+                                                )}
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>}
+                                </div>
+
+
+                            </div>
+                            <div className='container-bookinghotel-box2-list2'>
+                                <div className=''>Tiền trả trước</div>
+                                <div className='container-bookinghotel-box2-list2-moneyBooking'>
+                                    <input onChange={this.handleChange} value={this.state.moneyBooking} name="moneyBooking" type='text'></input>
+                                    <div className=''>ĐỒNG</div>
+
+                                </div>
+
+
+                            </div>
+                            <div className='container-bookinghotel-box2-list2'>
+                                <div className=''>Giá thỏa thuận</div>
+                                <div className='container-bookinghotel-box2-list2-moneyBooking'>
+                                    <input type='text'></input>
+                                    <div className=''>ĐỒNG</div>
+                                </div>
+                            </div>
+                            <div className='container-bookinghotel-box2-list2'>
+                                <div className=''>Ghi chú</div>
+                                <input onChange={this.handleChange} value={this.state.ghichu} name="ghichu" type='text'></input>
+
+
+                            </div>
+                            <div className='container-bookinghotel-box2-list2'>
+                                <div className='container-bookinghotel-box2-list2-item1'>Phòng đặt </div>
+                                <div onClick={this.createRoom} className='container-bookinghotel-box2-list2-item2'><i class="fa-solid fa-plus"></i>THÊM PHÒNG</div>
+                            </div>
+                            <div className='container-bookinghotel-box2-list2 container-bookinghotel-box2-list2-cusdetail'>DETAIL ROOM</div>
+                            <div className='container-bookinghotel-box2-list8'>
+                                <div className='box2-list8'>
+                                    <div className='box2-list8-item1'>Số phòng </div>
+                                    <div className='box2-list8-item2'>
+                                        {this.state.allRoomChoosen.map((item, index) => (
+                                            <div className=''>
+                                                {item.MAP}
+
+                                            </div>
+
+                                        ))
+
+                                        }
+
 
 
                                     </div>
 
+                                </div>
+                                <div className='box2-list8'>
+                                    <div className='box2-list8-item1'>Đơn giá </div>
+                                    <div className='box2-list8-item2'>
+                                        {this.state.allRoomChoosen.map((item, index) => (
+                                            <div className=''>
+                                                {item.Dongia}
 
-                                </div>}
-                            </div>
+                                            </div>
 
+                                        ))
 
-                        </div>
-                        <div className='container-bookinghotel-box2-list2'>
-                            <div className=''>Tiền trả trước</div>
-                            <div className=''><input type='text'></input></div>
-
-
-                        </div>
-                        <div className='container-bookinghotel-box2-list2'>
-                            <div className=''>Giá thỏa thuận</div>
-                            <div className=''><input type='text'></input></div>
-                        </div>
-                        <div className='container-bookinghotel-box2-list2'>
-                            <div className=''>Ghi chú</div>
-                            <input type='text'></input>
+                                        }
 
 
-                        </div>
-                        <div className='container-bookinghotel-box2-list2'>
-                            <div className='container-bookinghotel-box2-list2-item1'>Phòng đặt </div>
-                            <div onClick={this.createRoom} className='container-bookinghotel-box2-list2-item2'><i class="fa-solid fa-plus"></i>THÊM PHÒNG</div>
-                        </div>
-                        <div className='container-bookinghotel-box2-list2 container-bookinghotel-box2-list2-cusdetail'>DETAIL ROOM</div>
-                        <div className='container-bookinghotel-box2-list8'>
-                            <div className='box2-list8'>
-                                <div className='box2-list8-item1'>Số phòng </div>
-                                <div className='box2-list8-item2'>
-                                    {this.state.allRoomChoosen.map((item, index) => (
-                                        <div className=''>
-                                            {item.MAP}
 
-                                        </div>
-
-                                    ))
-
-                                    }
-
-
+                                    </div>
 
                                 </div>
+                                <div className='box2-list8'>
+                                    <div className='box2-list8-item1'>Loại Phòng</div>
+                                    <div className='box2-list8-item2'>
 
-                            </div>
-                            <div className='box2-list8'>
-                                <div className='box2-list8-item1'>Loại Phòng</div>
-                                <div className='box2-list8-item2'>
-                                    {this.state.allRoomChoosen.map((item, index) => (
-                                        <div className=''>
-                                            {item.MOTA}
+                                        {this.state.allRoomChoosen.map((item, index) => (
+                                            <div className=''>
+                                                {item.MOTA}
 
-                                        </div>
+                                            </div>
 
-                                    ))
+                                        ))
 
-                                    }
-
+                                        }
 
 
+                                    </div>
                                 </div>
+
+
                             </div>
 
 
-                        </div>
 
 
-
-
-                    </div>}
+                        </div>}
 
 
 
@@ -1226,17 +1574,20 @@ class BookingHotel extends Component {
                                     <div className='container-modal-box2-list1-item1'>
                                         <div className='input-label'>First Name</div>
                                         <input name="firstname" onChange={this.handleChange} value={this.state.firstname} placeholder='Nhap First Name ' type='text' className='custom-input'></input>
+                                        <div className='custom-input-error'>{this.state.errorFirstname}</div>
                                     </div>
 
                                     <div className='container-modal-box2-list1-item1'>
                                         <div className='input-label'>Last Name</div>
-
                                         <input name="lastname" onChange={this.handleChange} value={this.state.lastname} placeholder='Nhập Last Name' type='text' className='custom-input'></input>
+                                        <div className='custom-input-error'>{this.state.errorLastname}</div>
+
                                     </div>
                                     <div className='container-modal-box2-list1-item1'>
                                         <div className='input-label'>Full Name</div>
-
                                         <input name="fullname" onChange={this.handleChange} value={this.state.fullname} placeholder='Nhập FullName' type='text' className='custom-input'></input>
+                                        <div className='custom-input-error'>{this.state.errorFullname}</div>
+
                                     </div>
 
                                 </div>
@@ -1244,16 +1595,82 @@ class BookingHotel extends Component {
                                     <div className='container-modal-box2-list1-item1'>
                                         <div className='input-label'>CMND</div>
                                         <input name="cmnd" onChange={this.handleChange} value={this.state.cmnd} placeholder='Nhap CMND' type='text' className='custom-input'></input>
+                                        <div className='custom-input-error'>{this.state.errorCmnd}</div>
+
                                     </div>
                                     <div className='container-modal-box2-list1-item1'>
-                                        <div className='input-label'>Giới Tính</div>
+                                        <div className='input-label'>Giới Tính </div>
+                                        <div onClick={this.handleClickGender} name="gender" onChange={this.handleChange} value={this.state.gender} placeholder='Nhập Giới Tính' type='text' className='custom-input custom-input-more'>
+                                            <div className=''>Chọn giới tính---{this.state.gender}</div>
+                                            <i class="fa-solid fa-caret-down"></i>
+                                        </div>
+                                        <div className={this.state.handleGender ? ('container-modal-box2-list1-item1-modalgender container-modal-box2-list1-item1-modalgender-cus') : ('container-modal-box2-list1-item1-modalgender')}>
+                                            <div onClick={this.handleGender} data-value="gender" data-name="NAM">NAM</div>
+                                            <div onClick={this.handleGender} data-value="gender" data-name="NU">NỮ</div>
+                                            <div onClick={this.handleGender} data-value="gender" data-name="OTHER">OTHER</div>
 
-                                        <input name="gender" onChange={this.handleChange} value={this.state.gender} placeholder='Nhập Giới Tính' type='text' className='custom-input'></input>
+                                        </div>
+
+                                        {/* <div className='custom-input-error'>{this.state.errorGender}</div> */}
+
                                     </div>
                                     <div className='container-modal-box2-list1-item1'>
                                         <div className='input-label'>Ngày Sinh</div>
+                                        <div name="datebirth" onChange={this.handleChange} value={this.state.datebirth} placeholder='Nhập Ngày Sinh' type='text' className='custom-input custom-input-more'>
+                                            <div className=''>Chọn </div>
+                                            <div className=''>
+                                                <div className='box1-list2-date'>
+                                                    <div className='box1-list2-date-1'>{dayBirth ? (
+                                                        <div className="selected-date">
+                                                            {dayBirth}
+                                                        </div>
+                                                    ) : (`${day}/${month}/ ${year}`)}</div>
+                                                    <div onClick={this.datepicker5} className='box1-list2-date-2'><i class="fa-regular fa-calendar"></i></div>
+                                                </div>
+                                                {this.state.datepicker5 && <div className='custom-input-modalgender'>
+                                                    <div className='container-bookinghotel-box1-list2--list1'>
 
-                                        <input name="datebirth" onChange={this.handleChange} value={this.state.datebirth} placeholder='Nhập Ngày Sinh' type='text' className='custom-input'></input>
+                                                        <div className='box1-list2-tabledate'>
+
+                                                            <div className="date-picker">
+                                                                <div className="date-picker-header">
+                                                                    <button onClick={() => this.changeMonth5(-1)} className="date-picker-nav">{"<"}</button>
+                                                                    <span>{monthYear}</span>
+                                                                    <button onClick={() => this.changeMonth5(1)} className="date-picker-nav">{">"}</button>
+                                                                </div>
+                                                                <div className="calendar-grid">
+                                                                    {['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'].map((day, index) => (
+                                                                        <div key={index} className="calendar-day-name">
+                                                                            {day}
+                                                                        </div>
+                                                                    ))}
+                                                                    {this.renderDays5()}
+                                                                </div>
+                                                                {selectedDate && (
+                                                                    <div className="selected-date">
+                                                                        Ngày đã chọn: {selectedDate.toLocaleDateString('vi-VN')}
+                                                                    </div>
+                                                                )}
+                                                            </div>
+
+
+                                                        </div>
+
+
+                                                    </div>
+
+
+
+                                                </div>}
+
+                                            </div>
+
+
+
+
+
+
+                                        </div>
                                     </div>
 
                                 </div>
@@ -1262,16 +1679,20 @@ class BookingHotel extends Component {
                                     <div className='container-modal-box2-list1-item1'>
                                         <div className='input-label'>Number Phone</div>
                                         <input name="numberphone" onChange={this.handleChange} value={this.state.numberphone} placeholder='Nhập number' type='text' className='custom-input'></input>
+                                        <div className='custom-input-error'>{this.state.errorNumberphone}</div>
+
                                     </div>
                                     <div className='container-modal-box2-list1-item1'>
                                         <div className='input-label'>Email</div>
-
                                         <input name="email" onChange={this.handleChange} value={this.state.email} placeholder='Nhập Email' type='text' className='custom-input'></input>
+                                        <div className='custom-input-error'>{this.state.errorEmail}</div>
+
                                     </div>
                                     <div className='container-modal-box2-list1-item1'>
                                         <div className='input-label'>Địa chỉ</div>
+                                        <input name="address" onChange={this.handleChange} value={this.state.address} placeholder='Nhập Địa Chỉ' type='text' className='custom-input '></input>
+                                        <div className='custom-input-error'>{this.state.errorAddress}</div>
 
-                                        <input name="address" onChange={this.handleChange} value={this.state.address} placeholder='Nhập Địa Chỉ' type='text' className='custom-input'></input>
                                     </div>
 
                                 </div>
@@ -1293,7 +1714,7 @@ class BookingHotel extends Component {
                 }
 
 
-                <div className='test'>
+                {/* <div className='test'>
 
                     {this.state.allRoom.map((item, index) => (
 
@@ -1306,7 +1727,7 @@ class BookingHotel extends Component {
                     ))}
 
 
-                </div>
+                </div> */}
 
 
 

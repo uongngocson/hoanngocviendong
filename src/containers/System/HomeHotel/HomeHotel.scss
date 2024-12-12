@@ -1,0 +1,289 @@
+.container-homehotel{
+
+  
+    
+
+    .contaner-homehotel-box1{
+        margin-top: 2px;
+        // background-color: aqua;
+        width: 96%;
+        height: 145px;
+        margin-left: 2%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-right: 10px;
+
+
+        .contaner-homehotel-box1--list1 , .contaner-homehotel-box1--list2, .contaner-homehotel-box1--list3, .contaner-homehotel-box1--list4{
+            width: 286px;
+            height: 145px;
+            background-color: #FFFFFF;
+            position: relative;
+            border-radius: 5px;
+            border: 1px solid gray;
+            .contaner-homehotel-box1--list1-item1{
+                position: absolute;
+                width: 100%;
+                height: 64px;
+                // background-color: aqua;
+                top: 0;
+
+                
+
+                .contaner-homehotel-box1--list1-item1-text1{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    background-color: #FFFFFF;
+                    text-align: center;
+                    justify-content: space-around;
+                    margin-top: 25px;
+
+                    .contaner-homehotel-box1--list1-item1-text1--logo{
+                        // background-color: aqua;
+                        width: 50px;
+                        height: 41px;
+
+                        .cus{
+                            font-size: 40px;
+                            color: #F3BB45;
+
+
+                        }
+
+
+                    }
+                    .contaner-homehotel-box1--list1-item1-text1-play{
+
+                        .contaner-homehotel-box1--list1-item1-text1-play-list1{
+
+                            .contaner-homehotel-box1--list1-item1-text1-play-list1-cus1{
+                                font-size: 15px;
+
+
+                            }
+                            .contaner-homehotel-box1--list1-item1-text1-play-list1-cus2{
+                                font-size: 20px;
+
+
+
+                            }
+
+                        }
+
+
+                    }
+                   
+
+
+
+                }
+
+                 .contaner-homehotel-box1--list1-item1-text2{
+
+
+
+                }
+
+
+
+
+            }
+            .contaner-homehotel-box1--list1-item2{
+                position: absolute;
+                height: 55px;
+                background-color: #FFFFFF;
+                width: 100%;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                gap: 5px;
+                color: #66615B;
+                font-weight: 600;
+                border-top: 1px solid gray;
+                border-radius: 5px;
+                border-bottom:2px solid gray ;
+
+
+
+            }
+
+
+        }
+        .contaner-homehotel-box1--list2{
+            width: 286px;
+            height: 145px;
+            // background-color: rgb(199, 65, 65);
+
+
+        }
+        .contaner-homehotel-box1--list3{
+            width: 286px;
+            height: 145px;
+            // background-color: rgb(63, 32, 219);
+
+
+        }
+        .contaner-homehotel-box1--list4{
+            width: 286px;
+            height: 145px;
+            // background-color: rgb(17, 160, 232);
+
+
+        }
+
+
+    }
+
+    .contaner-homehotel-box2{
+        margin-top: 10px;
+        position: absolute;
+        background-color: #FFFFFF;
+        width: 96%;
+        height: calc(100% - 135px);
+        display: grid;
+        margin-left: 2%;
+        height: 90%;
+        // border: 1px solid gray;
+        border-radius: 5px;
+
+        .contaner-homehotel-box2-list1 {
+            position: relative;
+            height: 100%; /* Để container chiếm toàn bộ chiều cao */
+            width: 69%; /* Chiều rộng theo yêu cầu */
+            // background-color: #F3BB45;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center; /* Căn giữa theo chiều dọc */
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            box-sizing: border-box;
+            border: 1px solid gray;
+            border-bottom: 2px solid gray ;
+            .custestluot{
+                background-color: #10d810;
+            }
+          }
+          
+          .contaner-homehotel-box2-list1--chart {
+            width: 100%; /* Để biểu đồ chiếm 100% chiều rộng container cha */
+            height: 100%; /* Để biểu đồ chiếm 100% chiều cao container cha */
+            // background-color: #10d810;
+          }
+          
+        .contaner-homehotel-box2-list2{
+            position: absolute;
+            height: 100%;
+            width: 29%;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-right: 8px;
+            border-bottom: 2px solid gray;
+            // background-color: #e11638;
+            right: 0;
+
+            .contaner-homehotel-box2-list2-item1{
+                display: flex;
+                height: 50px;
+                justify-content: space-between;
+                align-items: center;
+                // background-color: #10d810;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-bottom: 1px solid gray;
+
+                .text1{
+                    color: #299688;
+                    font-weight: 700;
+
+
+
+                }
+                
+            }
+            .contaner-homehotel-box2-list2-item2{
+                width: 100%;
+                overflow-y: auto; /* Thêm thanh cuộn dọc */
+                max-height: 505px; /* Chiều cao tối đa để thanh cuộn hoạt động */
+                scrollbar-width: thin; /* Kiểu thanh cuộn mỏng (cho Firefox) */
+                scrollbar-color: #ccc transparent; /* Màu thanh cuộn (cho Firefox) */
+                display: inline-grid;
+                height: auto;
+                grid-template-rows: 67px 67px ;
+                // background-color: #10d810;
+
+               
+                .contaner-homehotel-box2-list2-item2-1{
+                    width: 100%;
+                    height: 67px;
+                    align-items: center;
+                    display: inline-grid;
+                    border-bottom: 1px solid gray ;
+
+                    .contaner-homehotel-box2-list2-item2-1-status{
+                        display: flex;
+                        gap: 15px;
+                        margin-left: 10px;
+                        align-items: center;
+                        .status-1{
+                            font-size: 20px;
+
+
+                        }
+
+
+                    }
+                    .contaner-homehotel-box2-list2-item2-1-time{
+                        display: flex;
+                        gap: 15px;
+                        margin-left: 10px;
+                        align-items: center;
+
+                        .contaner-homehotel-box2-list2-item2-1-time-email{
+                            display: flex;
+                            gap: 10px;
+                        }
+
+
+                    }
+
+
+
+                }
+
+                .contaner-homehotel-box2-list2-item2-2{
+                    background-color: #F3BB45;
+
+
+
+                }
+
+            }
+
+            .contaner-homehotel-box2-list2-item2::-webkit-scrollbar {
+                width: 10px; /* Độ rộng thanh cuộn */
+            }
+            
+            .contaner-homehotel-box2-list2-item2::-webkit-scrollbar-track {
+                background: transparent; /* Nền thanh cuộn */
+            }
+            
+            .contaner-homehotel-box2-list2-item2::-webkit-scrollbar-thumb {
+                background-color: #ccc; /* Màu thanh cuộn */
+                border-radius: 10px; /* Bo tròn thanh cuộn */
+                border: 2px solid transparent; /* Viền trong suốt */
+                background-clip: content-box; /* Giữ hình dạng */
+            }
+            
+
+            
+        }
+
+
+    }
+
+
+
+}

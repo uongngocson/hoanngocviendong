@@ -27,6 +27,17 @@
         margin: auto 0 auto auto;
         padding: auto;
         width: 100%;
+        // background-color: #137AF4;
+        background-image: url('..//assets/images/bannerlogin.jpeg');
+
+        background-repeat:none ;
+        background-size: cover; /* Đảm bảo hình nền phủ kín phần tử */
+        background-position: center; /* Căn giữa hình nền */
+        background-repeat: no-repeat; /* Không cho phép lặp hình ảnh */
+        width: 100%;
+        height: 100vh; /* Chiều cao để hiển thị đủ hình nền */
+
+
     }
     //huy.quang: disable default eye icon on ie < 10
     input::-ms-reveal,
@@ -36,15 +47,25 @@
     }
     .login-container {
         padding: 100px 0 0 0;
+        display: flex ;
+        align-items: center;
+        text-align: center;
+        
+        
     }
+        
+    
     .form_login {
-        background: $colormain;
+
+        // background: #137AF4;
         border:none;
         border-radius: 8px; -webkit-border-radius:8px;
         height: 475px;
         margin: 50px auto 0;
         max-width: 470px;padding: 20px 50px;
         padding: 20px 50px;
+        width: 470px;
+        
         .title {
             color: $common-text-color;
             background-color: transparent;
@@ -54,6 +75,7 @@
             margin: 20px 0 20px 0;
             text-align: center;
             text-transform: uppercase;
+            color: black;
         }
         .error-msg {
             color:$common-error;
@@ -155,6 +177,10 @@
         .form_login{
             height: 475px;
             max-width: 360px;
+           
+
+
+            
             .form-group {
                 margin-bottom: 20px;
             }
@@ -167,6 +193,7 @@
         .form_login{
             height: 475px;
             max-width: 360px;
+            
             .form-group {
                 margin-bottom: 20px;
             }

@@ -1,0 +1,43 @@
+.container-stock{
+    // background-color: aqua;
+    .container-stock-box1{
+                  width: 100%;
+                    height: 170px;
+                    background-color: rgba(255, 255, 255, 0.932);
+                    display: grid;
+                    gap: 20px;
+                    overflow-x: auto; /* Hiển thị thanh cuộn ngang nếu nội dung quá lớn */
+                    grid-auto-flow: column; /* Sắp xếp các phần tử theo hàng ngang */
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Điều chỉnh kích thước cột */
+                    padding-left: 30px;
+                    align-items: center; /* Căn giữa theo chiều dọc */
+
+                    .container-stock-box1--list1,.container-stock-box1--list2,.container-stock-box1--list3,.container-stock-box1--list4{
+                        width: 144px;
+                        height: 135px;
+                        background-color: #FFFFFF;
+                        display: grid;
+                        align-items: center;
+                        border-radius: 5px;
+                        font-weight: 600;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+                        .container-stock-box1--list1--item1{
+                            font-size: large;
+                            margin-top: 10px;
+
+                        }
+                        .container-stock-box1--list1--item2{
+                            border-top: 1px solid gray;
+                            padding-top: 15px;
+
+                        }
+
+
+
+
+                    }
+
+    }
+
+}

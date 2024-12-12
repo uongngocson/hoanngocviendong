@@ -1,0 +1,822 @@
+.indochinaqueen-main-blog{
+    // background-color: aqua;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .indochinaqueen-main-blog-header{
+        width: 100%;
+        height: auto;
+        position: relative;
+        .indochinaqueen-main-blog-header-navbar{
+            width: 80%;
+            height: 70px;
+            background-color: #FFF;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            justify-content: space-between;
+            margin: 0 auto;
+            margin-top: -40px;
+            padding-left:5px ;
+            padding-right: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            user-select: none; // Ngăn không cho chọn văn bản
+            -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+            -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+            -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+
+            .navbar-new1{
+                background-color: #FFF;
+                height: 70px;
+                width: 235px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #16A8FF;
+                font-size: 1.063em;
+                font-weight: 700;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #16A8FF;
+                    color: #FFF;
+
+                }
+
+          
+            }
+            .navbar-new1-active-color{
+                background-color: #16A8FF;
+                color: #FFF;
+                
+            }
+
+        }
+
+    }
+    .indochinaqueen-main-body{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .indochinaqueen-main-body-box1{
+            // background-color: #6AA143;
+            width: 80%;
+            display: grid;
+            height: auto;
+            // justify-content: center;
+            background-color: #FFF;
+            margin: 0 auto;
+            padding-left: 5px;
+            padding-right: 5px;
+            position: relative;
+            margin-top: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            gap: 15px; 
+            max-width: 1200px; /* Giới hạn kích thước cha */
+            .indochinaqueen-main-body-box1-menu{
+                width: 100%;
+                height:auto ;
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+                gap: 20px;
+                .indochinaqueen-main-body-box1-menu-item1{
+                    width: 100%;
+                    // background-color: #16A8FF;
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    
+                    
+
+                    .indochinaqueen-main-body-box1-menu-item1-img{
+                        // width: 60%;
+                        width: 100%;
+                        height: 255px;
+                    }
+                    .indochinaqueen-main-body-box1-menu-item1-text{
+                        // background-color: red;
+                        width: 100%;
+                        display: inline-grid;
+                        // padding: 20px 0;
+                        // width: 40%;
+                        
+
+
+                        .menu-item1-text--list1{
+                            font-size: 20px;
+                            color: #0a0a0a;
+                            font-weight: 700;
+                        }
+                        .menu-item1-text--list2{
+                            font-size: 1.125em;
+                            font-weight: 600;
+                            color: red;
+                        }
+                        .menu-item1-text--list3{
+                            // background-color: #16A8FF;
+                            font-size: 1em;
+                            font-weight: 600;
+                            color: #0a0a0a;
+
+                        }
+                        .menu-item1-text--listdate{
+                            position: relative;
+
+                           
+                            // margin-left: 100px;
+                            // background-color: #16A8FF;
+                            .lisdatecus{
+                                // background-color: red;
+                                height: 50px;
+                                display: flex;
+                                justify-content: flex-start;
+                                position: relative;
+                                left: 0;
+                                margin-top: -20px;
+                                margin-left: -1px;
+                                cursor: pointer;
+
+
+                            }
+
+                        }
+                        .menu-item1-text--list4{
+                            position: relative;
+                            bottom: 5px;
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+                            border-radius: 5px;
+                            font-size: 1em;
+                            font-weight: bold;
+
+
+                            .menu-item1-text--list4-box1,.menu-item1-text--list4-box2{
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                gap: 10px;
+                                .menu-item1-text--list4-subtract{
+                                    // background-color: #004da6;
+                                    color: #FFF;
+                                    font-weight: 700;
+                                    font-size: 1rem;
+                                    padding: 0 12px;
+                                    cursor: pointer;
+                                    border: 1px solid #004da6;
+                                    color: #332b25;
+                                    font-size: 1.2em;
+                                    border-radius: 5px;
+                                    user-select: none; // Ngăn không cho chọn văn bản
+                                    -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+                                    -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+                                    -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+    
+                                    &:hover{
+                                        background-color: red;
+                                    }
+    
+    
+                                }
+                                .menu-item1-text--list4-number{
+                                    color: #FFF;
+                                    font-weight: 700;
+                                    font-size: 1rem;
+                                    padding:  6px 12px;
+                                    cursor: pointer;
+                                    color: #332b25;
+                                    user-select: none; // Ngăn không cho chọn văn bản
+                                    -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+                                    -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+                                    -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+                            font-size: 1.2em;
+                            border: 1px solid #004da6;
+                            border-radius: 5px;
+    
+    
+    
+    
+    
+                                }
+                                .menu-item1-text--list4-add{
+                                    color: #FFF;
+                                    font-weight: 700;
+                                    font-size: 1rem;
+                                    padding: 0 12px;
+                                    cursor: pointer;
+                                    color: #332b25;
+                                    user-select: none; // Ngăn không cho chọn văn bản
+                                    -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+                                    -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+                                    -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+                            font-size: 1.2em;
+                            border: 1px solid #004da6;
+                            border-radius: 5px;
+                            &:hover{
+                                background-color: red;
+                            }
+    
+    
+    
+    
+                                }
+
+                              
+
+
+                            }
+
+                            .menu-item1-text--list4-box2{
+                              
+                                .menu-item1-text--list4-box2-item1{
+
+                                }
+
+                                .menu-item1-text--list4-box2-item2{
+                                    background-color:  #004da6;
+                                    padding:  6px 12px;
+                                    border-radius: 5px;
+                                    color: #FFF;
+                                    &:hover{
+                                        background-color: #16A8FF;
+                                    }
+
+
+                                }
+
+
+
+                            }
+                          
+
+                        }
+                        .menu-item1-text--list5{
+                            display: flex;
+                            gap: 10px;
+                            .menu-item1-text--list5-item1{
+                                background-color: #004da6;
+                                color: #FFF;
+                                padding: 5px !important;
+                                border-radius: 5px;
+                                align-items: center;
+                                font-weight: 700;
+                                display: flex;
+                                gap: 5px;
+                                padding-left: 7px !important;
+                                padding-right: 7px !important;
+                                position: relative;
+                                cursor: pointer;
+
+                                &:hover{
+                                    background-color: #16A8FF;
+                                }
+                                
+                            }
+
+                            .menu-item1-text--list5-item2{
+                                background-color: #004da6;
+                                color: #FFF;
+                                padding: 5px !important;
+                                border-radius: 5px;
+                                align-items: center;
+                                font-weight: 700;
+                                display: flex;
+                                gap: 5px;
+                                padding-left: 7px !important;
+                                padding-right: 7px !important;
+                                position: relative;
+                                cursor: pointer;
+
+                                &:hover{
+                                    background-color: #16A8FF;
+                                }
+                                
+                            }
+                        }
+
+
+                    }
+
+                }
+                .indochinaqueen-main-body-box1-menu-item2{
+                    width: 100%;
+                    // background-color: #589240;
+                    height: auto;
+                    flex: 1;
+                    display: flex;
+                    justify-content: space-between;
+
+
+                    .indochinaqueen-main-body-box1-menu-item2-text,.indochinaqueen-main-body-box1-menu-item2-text2{
+                        width: 50%;
+                        color: #332b25;
+                        font-size: 1.2em;
+                        color: #413831;
+                        font-size: 1.25em;
+                        font-style: italic;
+                        padding-top: 10px;
+                        font-weight: bold;
+                        padding-left: 3px;
+                        border-right: 1px solid gray;
+                        
+
+                        .maincontainer-booking{
+                            display: grid;
+                            // background-color:red ;
+                            grid-template-rows: 60px 60px repeat(6,60px);
+                            gap: 10px;
+
+                            .list-booking-children{
+                                display: flex;
+                                background-color: #FFF;
+                                padding-left: 15px;
+                                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+                                
+
+
+                                .menu-item1-text--list4-box1,.menu-item1-text--list4-box2{
+                                    display: flex;
+                                    align-items: center;
+                                    text-align: center;
+                                    gap: 10px;
+                                    .menu-item1-text--list4-subtract{
+                                        // background-color: #004da6;
+                                        color: #FFF;
+                                        font-weight: 700;
+                                        font-size: 1rem;
+                                        padding: 0 12px;
+                                        cursor: pointer;
+                                        border: 1px solid #004da6;
+                                        color: #332b25;
+                                        font-size: 1.2em;
+                                        border-radius: 5px;
+                                        user-select: none; // Ngăn không cho chọn văn bản
+                                        -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+                                        -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+                                        -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+        
+                                        &:hover{
+                                            background-color: red;
+                                        }
+        
+        
+                                    }
+                                    .menu-item1-text--list4-number{
+                                        color: #FFF;
+                                        font-weight: 700;
+                                        font-size: 1rem;
+                                        padding:  6px 12px;
+                                        cursor: pointer;
+                                        color: #332b25;
+                                        user-select: none; // Ngăn không cho chọn văn bản
+                                        -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+                                        -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+                                        -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+                                         font-size: 1.2em;
+                                         border: 1px solid #004da6;
+                                         border-radius: 5px;
+        
+        
+        
+        
+        
+                                    }
+                                    .menu-item1-text--list4-add{
+                                        color: #FFF;
+                                        font-weight: 700;
+                                        font-size: 1rem;
+                                        padding: 0 12px;
+                                        cursor: pointer;
+                                        color: #332b25;
+                                        user-select: none; // Ngăn không cho chọn văn bản
+                                        -webkit-user-select: none; // Đảm bảo hoạt động trên trình duyệt WebKit (Chrome, Safari)
+                                        -moz-user-select: none; // Đảm bảo hoạt động trên Firefox
+                                        -ms-user-select: none; // Đảm bảo hoạt động trên IE/Edge
+                                        font-size: 1.2em;
+                                        border: 1px solid #004da6;
+                                        border-radius: 5px;
+                                        &:hover{
+                                        background-color: red;
+                                }
+        
+        
+        
+        
+                                    }
+    
+                                  
+    
+    
+                                }
+    
+                                .menu-item1-text--list4-box2{
+                                  
+                                    .menu-item1-text--list4-box2-item1{
+    
+                                    }
+    
+                                    .menu-item1-text--list4-box2-item2{
+                                        background-color:  #004da6;
+                                        padding:  6px 12px;
+                                        border-radius: 5px;
+                                        color: #FFF;
+                                        &:hover{
+                                            background-color: #16A8FF;
+                                        }
+    
+    
+                                    }
+    
+    
+    
+                                }
+                                
+
+
+                            }
+
+
+                        }
+                        
+
+                    }
+                    .container-main-child{
+                        background-color: #FFBF00;
+                    }
+                }
+            }
+
+
+            
+            .indochinaqueen-body-box3{
+                width: 100%;
+                height: 800px;
+                position: relative;
+                // background-color: #16a8ff;
+                .indochinaqueen-body-box3-item1{
+                    // background-color: #589240;
+                    width: 100%;
+                    height: 540px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: relative;
+                   
+                    .indochinaqueen-body-box3-item1-list1{
+                        color: #004da6;
+                        font-size: 2.125em;
+                        text-transform: uppercase;
+                        vertical-align: inherit;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: center;
+                        // background-color: red;
+                       
+                    }
+                    .indochinaqueen-body-box3-item1-list2{
+                        // background-color: #16a8ff;
+                        margin-top: 40px;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 0 10px;
+                        padding-right: 20px;
+                        width: 100%;
+                        gap: 5px;
+                        .indochinaqueen-body-box3-item1-list2-box1{
+                            flex-grow: 1; /* Box con sẽ tự động co giãn theo box cha */
+                            flex-shrink: 1; /* Box con sẽ co lại khi không đủ không gian */
+                            flex-basis: 0; /* Đặt kích thước cơ sở ban đầu cho phép linh hoạt */
+                            max-width: 281px; /* Giữ kích thước tối đa */
+                            height: auto;
+                            background-color: #FFF;
+                            border-radius: 2px;
+                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            padding: 15px;
+                            text-align: center;
+                        
+                            .indochinaqueen-body-box3-item1-list2-box1-text1{
+                                font-size: 1.625em;
+                                color: #004da6;
+                                line-height: 24px;
+            
+            
+                            }
+                            .indochinaqueen-body-box3-item1-list2-box1-text2{
+                                font-size: 1.25em;
+                                color: #413831;
+                                line-height: 24px;
+                                font-style: italic;
+                                
+            
+                            }
+                            .indochinaqueen-body-box3-item1-list2-box1-text3{
+                                width: 100%;
+            
+                            }
+            
+            
+                        }
+                
+                    }
+            
+                }
+                .indochinaqueen-body-box3-item2{
+                    width: 100%;
+                    position: relative;
+            
+                    .item2-cus-more{
+                        max-width: 1070px;
+                        position: relative;
+                        height: 227px;
+                        border-radius: 2px;
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                        // background-color: #16a8ff;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        margin: 0 auto;
+                        gap: 10px;
+                        .indochinaqueen-body-box3-item2-text1{
+                            font-size: 2.250em;
+                            color: #589240;
+                            font-style: italic;
+                            font-weight: bold;
+                
+                          
+                
+                        }
+                        .indochinaqueen-body-box3-item2-text2{
+                            font-size: 2.250em;
+                            color:  #6AA143;
+                            font-style: italic;
+                            font-weight: bold;
+                        }
+                        .indochinaqueen-body-box3-item2-text3{
+                            color: #413831;
+                            font-size: 1.250em;
+                            font-style: italic;
+                        }
+                        .indochinaqueen-body-box3-item2-text4{
+                            background-color: #589240;
+                            font-size: 1.250em;
+                            color: #FFF;
+                            text-transform: uppercase; /* Viết hoa toàn bộ */
+                            padding: 5px 45px;
+                            font-weight: bold;
+                            border-bottom:1.5px solid gray ;
+                
+                
+                            
+                            
+                
+                        }
+            
+                    }
+                   
+            
+            
+                  
+            
+            
+                }
+            
+               
+            
+             }
+
+             .indochinaqueen-main-body-box1-describe{
+                // background-color: #16A8FF;
+                max-height: 1500px;
+                display: grid;
+                grid-template-rows: 50px auto;
+                .indochinaqueen-main-body-box1-describe-list1{
+                    // background-color: #16A8FF;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    border-bottom: 1px solid gray; // Đường viền gốc
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Tạo đổ bóng dưới
+                    .indochinaqueen-main-body-box1-describe-list1-text1{
+                        background-color: #004da6;
+                        color: #FFF;
+                        font-size: 1.063em;
+                        font-weight: 700;
+                         cursor: pointer;
+                         text-transform: uppercase;
+                         padding: 5px 100px;
+                         border-top: 2px solid red;
+                         border-radius: 2px;
+                         
+
+                    }
+                    .indochinaqueen-main-body-box1-describe-list1-text1-hover{
+                        background-color: red;
+                    }
+                    .indochinaqueen-main-body-box1-describe-list1-text2{
+                        background-color:  #004da6;
+                        color: #FFF;
+                        font-size: 1.063em;
+                        font-weight: 700;
+                         cursor: pointer;
+                         text-transform: uppercase;
+                         padding: 5px 100px;
+                         border-top: 2px solid red;
+                         border-radius: 2px;
+                    }
+                    .indochinaqueen-main-body-box1-describe-list1-text2-hover{
+                        background-color: red;
+                    }
+                    
+
+                }
+              
+                .indochinaqueen-main-body-box1-describe-list2{
+                    // background-color: #589240;
+                    font-size: 1.25em;
+                    color: #413831;
+                    line-height: 24px;
+                    font-style: italic;
+                    padding-top: 30px;
+
+                }
+                .indochinaqueen-main-body-box1-describe-list3{
+                    // background-color: #589240;
+                    font-size: 1.25em;
+                    color: #413831;
+                    line-height: 24px;
+                    font-style: italic;
+                    padding-top: 30px;
+                    display: grid;
+                    grid-template-rows: 50px 50px repeat(5,127px) 400px;
+
+                    .indochinaqueen-main-body-box1-describe-list3-box3{
+                        // background-color: #004da6;
+                        display: grid;
+                        justify-content: space-between;
+                        border-bottom: 1px solid gray; // Đường viền gốc
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Tạo đổ bóng dưới
+                        .indochinaqueen-main-body-box1-describe-list3-box3-list1{
+
+                            display: flex;
+                            gap: 10px;
+                            font-style: normal;
+                            font-weight: 700;
+                            align-items: center;
+                            text-align: center;
+
+
+                            .list3-box3-list1-test1{
+                                background-color: #16A8FF; // Màu nền
+                                width: 40px;             // Chiều rộng của box
+                                height: 40px;            // Chiều cao của box (bằng chiều rộng để tạo hình tròn)
+                                border-radius: 50%;       // Bo góc 50% để tạo hình tròn
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                justify-content: center;
+
+
+
+                            }
+                          
+                        }
+                       
+                          
+                            
+
+                            
+                        
+                        
+                        .indochinaqueen-main-body-box1-describe-list3-box3-list2{
+                            color: #FFBF00;
+                            padding-left: 49px;
+
+                        }
+                        .indochinaqueen-main-body-box1-describe-list3-box3-list3{
+                            padding-left: 49px;
+
+                        }
+
+
+
+                       
+
+
+                    }
+                    .indochinaqueen-main-body-box1-describe-list3-comment{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        padding: 25px 0;
+                        width: 100%;
+                        .comment-list1{
+                            display: flex;
+                            justify-content: center;
+                            font-size: 1.3em;
+                            font-weight: bold;
+                            font-style: normal;
+
+                        }
+                        .comment-list2{
+                            
+
+                            .comment-list2-box1{
+                                font-weight: bold;
+
+                            }
+                            .comment-list2-box2{
+                                display: flex;
+                                position: relative;
+                                width: 100%;
+                                height: 100px;
+
+                                border: 2px solid;
+                                border-image-slice: 1;
+                                border-width: 4px;
+                                border-image-source: linear-gradient(to right, #078cc1, #0834e0);
+                                padding: 20px;
+
+                            }
+
+                        }
+                        .comment-list3{
+                            display: flex;
+                            justify-content: flex-start;
+                            gap: 10px;
+                            .comment-list3-box1{
+                                .comment-list3-box1-item1{
+                                    font-weight: bold;
+                                    
+                                }
+                                .comment-list3-box1-item2{
+                                    border: 2px solid;
+                                    border-image-slice: 1;
+                                    border-width: 4px;
+                                    border-image-source: linear-gradient(to right, #078cc1, #0834e0);
+    
+                                }
+
+
+                            }
+                            .comment-list3-box2{
+                                .comment-list3-box2-item1{
+                                    font-weight: bold;
+                                }
+                                .comment-list3-box2-item2{
+                                    border: 2px solid;
+                                    border-image-slice: 1;
+                                    border-width: 4px;
+                                    border-image-source: linear-gradient(to right, #078cc1, #0834e0);
+                                }
+
+                            }
+                        }
+
+                        .comment-list4{
+                            display: flex;
+                            background-color: #004da6;
+                            position: relative;
+                            color: #FFF;
+                            font-style: normal;
+                            width: 120px;
+                            padding: 5px;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1em;
+                            font-weight: bold;
+                            border-radius: 5px;
+
+                            &:hover{
+                                background-color: #16A8FF;
+
+                            }
+
+
+
+                        }
+
+
+                       
+                        
+                        // background-color: #FFBF00;
+
+                    }
+                 
+
+                }
+
+             }
+
+            }
+
+    }
+}
